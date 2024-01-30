@@ -24,7 +24,6 @@ names <- c("Simo","Milo","Murre","Laila")
 # for(i in 1:length(names)) {
 for(i in seq_along(names)) { # Prefer seq_along() to length() for more neat code
 
-
   # Calculate edit distance between consequtive dog names
   dist <- adist(names[i], names[i+1]) %>% as.numeric()
   # print(edit_dist)
@@ -32,7 +31,6 @@ for(i in seq_along(names)) { # Prefer seq_along() to length() for more neat code
   # Add dog information
   paste0("edits from [", names[i], "] to [", names[i+1], "]: ", dist) %>%
     print()
-
 }
 
 
@@ -62,34 +60,26 @@ for(i in seq_along(names)) {
   # End loop
 }
 
-# Create mockup data for code names
-# https://jalostus.kennelliitto.fi/frmPentueet.aspx?R=172.22&A=2022
-# https://jalostus.kennelliitto.fi/frmKasvattaja.aspx?K=LITTLEFUN%27S&R=172.22
-# https://www.iltalehti.fi/perheartikkelit/a/b41870fc-7065-438d-8560-ac81df35b707
-#
-# Most popular dog names in 2022 (source: Kennelliiton Omakoira as reported by Ilta-lehti)
-# https://www.iltalehti.fi/perheartikkelit/a/b41870fc-7065-438d-8560-ac81df35b707
+# Load a data set of the most popular dog names and human names now and in 1900
+# h
+# Most popular dog names in 2022 (source: Kennelliiton Omakoira as reported by
+# Ilta-lehti, https://www.iltalehti.fi/perheartikkelit/a/b41870fc-7065-438d-8560-ac81df35b707)
 # https://dvv.fi/suosituimmat-lasten-nimet (Digi- ja väestötietovirasto)
-#
-fname <- ("data/dvv_kenneliliitto_2022_popular_names.csv")
+# Names in 1900 collected from: https://yle.fi/a/3-9418798
 
+# Load data
+fname <- ("data/dvv_kenneliliitto_2022_popular_names.csv")
 data_names <- read.table(fname, sep = ";", header = TRUE)
 
-data_names[1, 3]
-
+# Create empty placeholder vectors
 mean_distance_dogs_dogs <- vector("numeric")
 mean_distance_dogs_people <- vector("numeric")
 mean_distance_dogs_ancients <- vector("numeric")
 
-# Iterate through
+# Iterate through data
 for (i in 1:nrow(data_names)) {
 
-  nrow(data_names)
-
-  data_names[-i,1]
-
-  seq_len(nrow(data_names)) - i
-
+  # Calculate mean edit distances from every dog name to another dog name
   mean_distance_dogs_dogs <-
     stringdistmatrix(data_names[i,1],  # i'th row of the dog name column
                      # compare to other dog names than itself
@@ -98,13 +88,15 @@ for (i in 1:nrow(data_names)) {
     mean() %>%
     append(mean_distance_dogs_dogs, .)
 
+  # Calculate mean edit distances from every dog name to people names in 2022
   mean_distance_dogs_people <-
     stringdistmatrix(data_names[i,1],    # i'th row of the dog name column
-                     data_names[,2]) %>% # compare to most popular names in 1900
+                     data_names[,2]) %>% # compare to most popular names in 2022
     as.numeric() %>%
     mean() %>%
     append(mean_distance_dogs_people, .)
 
+  # Calculate mean edit distances from every dog name to people names in 1900
   mean_distance_dogs_ancients <-
     stringdistmatrix(data_names[i,1],    # i'th row of the dog name column
                      data_names[,3]) %>% # compare to most popular names in 1900
@@ -114,6 +106,7 @@ for (i in 1:nrow(data_names)) {
 
 }
 
+# Averages of averages
 mean_distance_dogs_dogs %>% mean()
 mean_distance_dogs_people %>% mean()
 mean_distance_dogs_ancients %>% mean()
@@ -124,11 +117,4 @@ t.test(mean_distance_dogs_dogs, mean_distance_dogs_people)
 t.test(mean_distance_dogs_dogs, mean_distance_dogs_ancients)
 
 t.test(mean_distance_dogs_people, mean_distance_dogs_ancients)
-
-}
-
-stringdistmatrix(data_names[1,1],
-                 data_names[2:nrow(data_names),1]) %>% as.numeric() %>% mean()
-stringdistmatrix(data_names[2,1], data_names[,2]) %>% as.numeric() %>% mean()
-stringdistmatrix(data_names[2,1], data_names[,3]) %>% as.numeric() %>% mean()
 
