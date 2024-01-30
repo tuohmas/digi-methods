@@ -61,9 +61,8 @@ for(i in seq_along(names)) {
 }
 
 # Load a data set of the most popular dog names and human names now and in 1900
-# h
 # Most popular dog names in 2022 (source: Kennelliiton Omakoira as reported by
-# Ilta-lehti, https://www.iltalehti.fi/perheartikkelit/a/b41870fc-7065-438d-8560-ac81df35b707)
+# Iltalehti, https://www.iltalehti.fi/perheartikkelit/a/b41870fc-7065-438d-8560-ac81df35b707)
 # https://dvv.fi/suosituimmat-lasten-nimet (Digi- ja väestötietovirasto)
 # Names in 1900 collected from: https://yle.fi/a/3-9418798
 
