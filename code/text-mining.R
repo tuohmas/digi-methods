@@ -10,21 +10,16 @@ pacman::p_load(tidyverse,
                tidytext, # for tokenizing text
                textstem) # for lemmatizing tokens
 
-pacman::p_load(tidyverse,
-               quanteda)
-
-
-
 # Read search terms
 misinfo_search <- readLines("data/misinfo_search_terms_lemmatized.txt")
 reliable_search <- readLines("data/reliable_info_search_terms_lemmatized.txt")
 covid_search <- readLines("data/covid_search_terms_lemmatized.txt")
 
-misinfo_search
-reliable_search
-covid_search
+print(misinfo_search)
+print(reliable_search)
+print(covid_search)
 
-# Read blog document data
+# Read blog document data, add unique identifier to documents
 document_data <- read_csv("data/platformblogs.csv") %>%
   mutate(company = str_to_title(company)) %>%
   mutate(doc_id = 1:nrow(.)) %>% # Add identifier
@@ -33,21 +28,19 @@ document_data <- read_csv("data/platformblogs.csv") %>%
 # Glimpse data
 glimpse(document_data)
 
+# Keep only a subset of columns
 keep_cols <- c("doc_id", "company", "title", "text")
 
 # Preprocess the corpus
 document_tokens <- document_data %>% select(keep_cols) %>%
 
-  # Tokenize
-  # quanteda::tokens(text, what = "word",
-  #                  remove_punct = TRUE,
-  #                  remove_symbols = TRUE)
-  unnest_tokens(word, text) %>%
+  # Tokenize text by words (unigrams)
+  tidytext::unnest_tokens(word, text) %>%
 
-  # Lemmatize tokens using hunspell (language: en_US)
-  mutate(lemma = lemmatize_words(word),
+  # Tokens: Lemmatize tokens using hunspell (language: en_US)
+  mutate(lemma = textstem::lemmatize_words(word),
 
-         # remove numbers and punctuation
+         # Prerocess: remove numbers and punctuation
          lemma = gsub("[[:digit:]]|[[:punct:]]", NA, lemma)) %>%
 
   # Remove empty rows after gsub
@@ -72,12 +65,10 @@ glimpse(document_words)
 View(document_words)
 
 # ADD drop stop words
-stopwords <- stopwords(language = "en")
-stopwords <- stopwords(language = "en", source = "hunspell") # Try another engine
-
-?stopwords()
-
-anti_join()
+# stopwords <- stopwords(language = "en")
+# stopwords <- stopwords(language = "en", source = "hunspell") # Try another engine
+#
+# anti_join()
 
 # Dataframe for search term frequencies
 search_documents <- document_words %>%
@@ -89,6 +80,8 @@ search_documents <- document_words %>%
 # Glimpse and View data
 glimpse(search_documents)
 View(search_documents)
+
+### Analysis: TF-IDF statistics ################################################
 
 # Calculate tf-idf statistic
 document_words <- document_words %>%
@@ -109,6 +102,7 @@ keyword_data <- document_words %>%
 
 # Glimpse data
 glimpse(keyword_data)
+View(keyword_data)
 
 # Merge datasets
 master_data <- document_data %>%
@@ -122,6 +116,3 @@ master_data <- document_data %>%
 # Glimpse master dataset
 glimpse(master_data)
 View(master_data)
-
-# Add included field in platform blog data
-
