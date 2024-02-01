@@ -9,12 +9,13 @@
 rm(list = ls())
 
 # Load packages
-require("stringdist", "dplyr", "tidyr")
+require("stringdist", "dplyr", "tidyr", "strcmp")
 
 # Alternatively
 pacman::p_load(dplyr,
                tidyr,
                stringdist)
+
 
 ### CALCULATE EDIT DISTANCES ###################################################
 
@@ -117,3 +118,5 @@ t.test(mean_distance_dogs_dogs, mean_distance_dogs_ancients)
 
 t.test(mean_distance_dogs_people, mean_distance_dogs_ancients)
 
+# Null hypothesis stands. Based on t-test results we can't say confidently
+# that dog names would be *more* similar to current names than ancient ones
