@@ -17,28 +17,28 @@ pacman::p_load(dplyr,
                tidyr,
                stringdist)
 
-### CALCULATE EDIT DISTANCES ###################################################
+### BASIC FUNCTIONS ON VECTORS #################################################
 
-# Assign dognames into a "names" variable
+# Lets assign dog names into a "names" variable
 names <- c("Simo","Milo","Murre","Laila")
 
 # Names is a character vector:
 typeof(names)
 is.vector(names)
 
-# Names is 4 elements long:
+# Names has the length of 4 elements:
 length(names)
 
-# Second element of the vector is "Milo":
-print(names[2])
+# Second element (value in the second index) of the vector is "Milo":
+names[2]
 
-# Last element in "Laila":
-print(names[length(names)])
+# Last element is "Laila":
+names[length(names)]
 
 # Which element is "Simo"?
 which(names == "Simo")
 
-# To call for the length of the names in the vector, use nchar():
+# To call for the length of the names in the vector, we would use nchar:
 nchar(names)
 
 # To sort names alphabetically, we would use sort:
@@ -47,6 +47,30 @@ sort(names)
 # See how, if we do not assign sorted vector anywhere (names <- sort(names)),
 # calling names again will revert to its original order:
 print(names)
+
+# Coercing names to numeric type results to a bunch of NA values (missing):
+as.numeric(names)
+
+# Whereas coercing names into a dataframe object gives a legitimate dataframe:
+as.data.frame(names)
+
+# Now we could build up the data frame by adding new information, like ages
+df_dogs <- data.frame(names = names, # Column name, column values
+                      ages  = c(2022, 2021, 2018, NA))
+
+# Alternatively, lets use mutate method that allows to edit and add columns
+df_dogs <- as.data.frame(names)
+
+# The pipe (%>%) takes what is before it and applies that to the function after
+df_dogs <- df_dogs %>% mutate(ages = c(2022, 2021, 2018, NA))
+
+# Is the same as:
+df_dogs <- mutate(df_dogs, ages = c(2022, 2021, 2018, NA))
+
+# Glimpse df_dogs:
+glimpse(df_dogs)
+
+### CALCULATE EDIT DISTANCES ###################################################
 
 # Lets iterate through every dog name pair, so 1st element against 2nd element,
 # 2nd against 3rd and so one, and calculate so called Levenshtein distance
