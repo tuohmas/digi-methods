@@ -9,33 +9,73 @@
 rm(list = ls())
 
 # Load packages
-require("stringdist", "dplyr", "tidyr", "strcmp")
+packages( "dplyr", "tidyr", "stringdist")
 
-# Alternatively
+# Alternatively, p_load function from pacman library allows installs all missing
+# packages (including pacman) and loads them
 pacman::p_load(dplyr,
                tidyr,
                stringdist)
 
-
 ### CALCULATE EDIT DISTANCES ###################################################
 
-# Mockup names for our dogs
+# Assign dognames into a "names" variable
 names <- c("Simo","Milo","Murre","Laila")
+
+# Names is a character vector
+typeof(names)
+
+# Names is 4 elements long
+length(names)
+
+# Second element of the vector is "Milo"
+print(names[2])
+
+# Last element in "Laila"
+print(names[length(names)])
+
+# To sort names alphabetically, we would use sort.
+# See how, if we do not assign sorted vector anywhere (names <- sort(names)),
+# calling names again will revert to its original order
+sort(names)
+
+# Lets iterate through every dog name pair, so 1st element against 2nd element,
+# 2nd against 3rd and so one, and calculate so called Levenshtein distance
+# between the two character strings (the smaller the number, the more similar
+# the strings are to one another
 
 # for(i in 1:length(names)) {
 for(i in seq_along(names)) { # Prefer seq_along() to length() for more neat code
 
   # Calculate edit distance between consequtive dog names
+  # The pipe (%>%) allows us to perform functions in sequence:
+  # 1) Apply adist() function, 2) take the result value an coerce it to numeric
+
   dist <- adist(names[i], names[i+1]) %>% as.numeric()
-  # print(edit_dist)
+
+  # Error handling: when i is the last element, function will compare it to
+  # an non-existing element, resulting to missing (NA). This might cause
+  # problems later on, so let's break the loop if the value is NA (with is.na)
+
+  if(is.na(dist)) { break # When dist variable is missing (NA), break loop
+
+    } else {              # When expression is FALSE (dist is not missing value)
 
   # Add dog information
   paste0("edits from [", names[i], "] to [", names[i+1], "]: ", dist) %>%
     print()
+
+    }
+  # End loop
 }
 
+### ITERATE THROUGH A LIST, 2 ##################################################
 
-# Add data as a matrix
+# Instead of simply printing out edit distances one pair at a time, we would
+# want to visualize every pair as one matrix
+
+# First, lets initialize an empty matrix of the size of our data set:
+# One dog name for every row and one dog name for every column
 mat_names <- matrix(nrow = length(names), ncol = length(names),
                     dimnames = list(names, names))
 
@@ -45,15 +85,17 @@ for(i in seq_along(names)) {
   # Initialize j as (index) 1
   j <- 1
 
-  while(j <= length(names)) {
+  # While loop repeats as long as the expression remains TRUE, breaks when FALSE
+  while(j <= length(names)) { # "While  j is smaller or equal to vector length"
 
-    # Calculate edit distance between consequtive dog names
+    # Calculate edit distance between consecutive dog names
     dist <- adist(names[i], names[j]) %>% as.numeric()
 
-    # add edit distance information to proper place in our matrix
+    # add edit distance information to its proper place in our matrix:
+    # row i, column j
     mat_names[i, j] <- dist
 
-    # Add one to j before restarting while loop
+    # Add one to j before restarting the loop
     j <- j + 1
 
   }
@@ -61,22 +103,34 @@ for(i in seq_along(names)) {
   # End loop
 }
 
+# Print out the resulting matrix
+print(mat_names)
+
+### ANALYZE SIMILARITY BETWEEEN DOG NAMES TO PEOPLE NAMES ######################
+
 # Load a data set of the most popular dog names and human names now and in 1900
-# Most popular dog names in 2022 (source: Kennelliiton Omakoira as reported by
+# Most popular dog names in 2022 (source: Kenneliiton Omakoira as reported by
 # Iltalehti, https://www.iltalehti.fi/perheartikkelit/a/b41870fc-7065-438d-8560-ac81df35b707)
 # https://dvv.fi/suosituimmat-lasten-nimet (Digi- ja väestötietovirasto)
 # Names in 1900 collected from: https://yle.fi/a/3-9418798
 
-# Load data
+# Load clean data set
 fname <- ("data/dvv_kenneliliitto_2022_popular_names.csv")
 data_names <- read.table(fname, sep = ";", header = TRUE)
 
-# Create empty placeholder vectors
+# Data set is a dataframe with 3 columns for top dog names given in 2022,
+# top people names given in 2022, and top people names given in 1900. Columns
+# are of type character, and there are 31 rows for each column (no missing)
+glimpse(data_names)
+View(data_names)
+
+# Initialize empty vectors
 mean_distance_dogs_dogs <- vector("numeric")
 mean_distance_dogs_people <- vector("numeric")
 mean_distance_dogs_ancients <- vector("numeric")
 
-# Iterate through data
+# Iterate through data set
+
 for (i in 1:nrow(data_names)) {
 
   # Calculate mean edit distances from every dog name to another dog name
@@ -84,8 +138,9 @@ for (i in 1:nrow(data_names)) {
     stringdistmatrix(data_names[i,1],  # i'th row of the dog name column
                      # compare to other dog names than itself
                      data_names[-i, 1]) %>%
-    as.numeric() %>%
-    mean() %>%
+    as.numeric() %>% # Coerce to type numeric
+    mean() %>%       # Calculate mean distance to every target string
+    # Append average to the result vector. "." is a placeholder for the mean
     append(mean_distance_dogs_dogs, .)
 
   # Calculate mean edit distances from every dog name to people names in 2022
@@ -102,9 +157,12 @@ for (i in 1:nrow(data_names)) {
                      data_names[,3]) %>% # compare to most popular names in 1900
     as.numeric() %>%
     mean() %>%
-    append(mean_distance_dogs_people, .)
+    append(mean_distance_dogs_ancients, .)
 
 }
+
+print(mean_distance_dogs_dogs)
+max(mean_distance_dogs_dogs)
 
 # Averages of averages
 mean_distance_dogs_dogs %>% mean()
