@@ -22,22 +22,31 @@ pacman::p_load(dplyr,
 # Assign dognames into a "names" variable
 names <- c("Simo","Milo","Murre","Laila")
 
-# Names is a character vector
+# Names is a character vector:
 typeof(names)
+is.vector(names)
 
-# Names is 4 elements long
+# Names is 4 elements long:
 length(names)
 
-# Second element of the vector is "Milo"
+# Second element of the vector is "Milo":
 print(names[2])
 
-# Last element in "Laila"
+# Last element in "Laila":
 print(names[length(names)])
 
-# To sort names alphabetically, we would use sort.
-# See how, if we do not assign sorted vector anywhere (names <- sort(names)),
-# calling names again will revert to its original order
+# Which element is "Simo"?
+which(names == "Simo")
+
+# To call for the length of the names in the vector, use nchar():
+nchar(names)
+
+# To sort names alphabetically, we would use sort:
 sort(names)
+
+# See how, if we do not assign sorted vector anywhere (names <- sort(names)),
+# calling names again will revert to its original order:
+print(names)
 
 # Lets iterate through every dog name pair, so 1st element against 2nd element,
 # 2nd against 3rd and so one, and calculate so called Levenshtein distance
