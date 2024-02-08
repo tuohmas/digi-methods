@@ -14,8 +14,8 @@ pacman::p_load(tidyverse,     # For data manipulation
                RColorBrewer) # For additional color palettes
 
 # load nodes and edges
-nodes <- read_csv("data/interest-groups-pseudo-nodes.csv")
-edges <- read_csv("data/interest-groups-pseudo-edges.csv")
+nodes <- read_csv("data/network analysis/interest-groups-pseudo-nodes.csv")
+edges <- read_csv("data/network analysis/interest-groups-pseudo-edges.csv")
 
 # create a graph object from a data frame
 g <- igraph::graph_from_data_frame(edges, directed = FALSE, vertices = nodes)
