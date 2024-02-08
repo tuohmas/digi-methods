@@ -1,0 +1,908 @@
+id,label,interest_group_code,memberships,interest_group,group
+Sticky Kangaroo,Sticky Kangaroo,6,1,Metsäteollisuus,old
+Shy Clownfish,Shy Clownfish,12,1,Teknologiateollisuus,old
+Furtive Mouse,Furtive Mouse,10,1,Suomen Yrittäjät,old
+Brawny Wolf,Brawny Wolf,4,1,Kaupan liitto,old
+Prickly Cattle,Prickly Cattle,8,1,Perheyritysten liitto,old
+Dependent Marmoset,Dependent Marmoset,8,1,Perheyritysten liitto,old
+Creepy Hare,Creepy Hare,10,1,Suomen Yrittäjät,old
+Special Harrier,Special Harrier,12,1,Teknologiateollisuus,old
+Expensive Kiwi,Expensive Kiwi,10,1,Suomen Yrittäjät,old
+Divergent Jaguar,Divergent Jaguar,10,1,Suomen Yrittäjät,old
+Permissible Ant,Permissible Ant,11,1,Suomen startup-yhteisö,new
+Measly Vulture,Measly Vulture,13,2,Linkkaaja,link
+Nice Earwig,Nice Earwig,8,1,Perheyritysten liitto,old
+Grouchy Leopon,Grouchy Leopon,13,2,Linkkaaja,link
+Lackadaisical Gibbon,Lackadaisical Gibbon,2,1,EVA/Etla,old
+Truculent Bull,Truculent Bull,10,1,Suomen Yrittäjät,old
+Awesome Wren,Awesome Wren,12,1,Teknologiateollisuus,old
+Next Chimpanzee,Next Chimpanzee,10,1,Suomen Yrittäjät,old
+Cool Reindeer,Cool Reindeer,10,1,Suomen Yrittäjät,old
+Noxious Oribi,Noxious Oribi,10,1,Suomen Yrittäjät,old
+Ultra Raccoon,Ultra Raccoon,5,1,Keskuskauppakamari,old
+Unkempt Goldfish,Unkempt Goldfish,5,1,Keskuskauppakamari,old
+Callous Lungfish,Callous Lungfish,10,1,Suomen Yrittäjät,old
+Lumpy Duck,Lumpy Duck,12,1,Teknologiateollisuus,old
+Robust Mastodon,Robust Mastodon,13,3,Linkkaaja,link
+Damaged Constrictor,Damaged Constrictor,1,1,EK,old
+Hot Guineafowl,Hot Guineafowl,13,2,Linkkaaja,link
+Big Limpet,Big Limpet,7,1,PALTA,old
+Light Penguin,Light Penguin,4,1,Kaupan liitto,old
+Important Camel,Important Camel,1,1,EK,old
+Worried Grebe,Worried Grebe,9,1,Rakennusteollisuus,old
+Hospitable Lamprey,Hospitable Lamprey,12,1,Teknologiateollisuus,old
+Fierce Pheasant,Fierce Pheasant,7,1,PALTA,old
+Capable Raccoon,Capable Raccoon,12,1,Teknologiateollisuus,old
+Acid Jackal,Acid Jackal,4,1,Kaupan liitto,old
+Rhetorical Urial,Rhetorical Urial,4,1,Kaupan liitto,old
+Wiggly Shrew,Wiggly Shrew,13,3,Linkkaaja,link
+Tasteful Falcon,Tasteful Falcon,9,1,Rakennusteollisuus,old
+Demonic Cricket,Demonic Cricket,7,1,PALTA,old
+Typical Ermine,Typical Ermine,1,1,EK,old
+Drunk Catshark,Drunk Catshark,13,2,Linkkaaja,link
+Puffy Chinchilla,Puffy Chinchilla,8,1,Perheyritysten liitto,old
+Unable Opossum,Unable Opossum,10,1,Suomen Yrittäjät,old
+Bewildered Cephalopod,Bewildered Cephalopod,13,2,Linkkaaja,link
+Hateful Cockroach,Hateful Cockroach,12,1,Teknologiateollisuus,old
+Truthful Egret,Truthful Egret,9,1,Rakennusteollisuus,old
+Torpid Rook,Torpid Rook,6,1,Metsäteollisuus,old
+Delicate Snake,Delicate Snake,3,1,Finanssiala,old
+Gruesome Wildebeest,Gruesome Wildebeest,5,1,Keskuskauppakamari,old
+Interesting Zorilla,Interesting Zorilla,13,3,Linkkaaja,link
+Ubiquitous Galliform,Ubiquitous Galliform,6,1,Metsäteollisuus,old
+Divergent Parakeet,Divergent Parakeet,3,1,Finanssiala,old
+Craven Rabbit,Craven Rabbit,9,1,Rakennusteollisuus,old
+Hoc Capybara,Hoc Capybara,10,1,Suomen Yrittäjät,old
+Ambiguous Tortoise,Ambiguous Tortoise,13,2,Linkkaaja,link
+Bored Wildcat,Bored Wildcat,1,1,EK,old
+Grandiose Hedgehog,Grandiose Hedgehog,13,2,Linkkaaja,link
+Shaggy Raven,Shaggy Raven,10,1,Suomen Yrittäjät,old
+Lethal Vaquita,Lethal Vaquita,3,1,Finanssiala,old
+Well-To-Do Panda,Well-To-Do Panda,2,1,EVA/Etla,old
+Light Yak,Light Yak,7,1,PALTA,old
+Bawdy Ape,Bawdy Ape,1,1,EK,old
+Many Junglefowl,Many Junglefowl,9,1,Rakennusteollisuus,old
+Shallow Wolf,Shallow Wolf,12,1,Teknologiateollisuus,old
+Frail Horse,Frail Horse,2,1,EVA/Etla,old
+Wasteful Badger,Wasteful Badger,10,1,Suomen Yrittäjät,old
+Comfortable Stork,Comfortable Stork,10,1,Suomen Yrittäjät,old
+Changeable Lemur,Changeable Lemur,10,1,Suomen Yrittäjät,old
+Probable Ladybug,Probable Ladybug,2,1,EVA/Etla,old
+Waiting Pony,Waiting Pony,3,1,Finanssiala,old
+Warlike Hornet,Warlike Hornet,12,1,Teknologiateollisuus,old
+Cloudy Stingray,Cloudy Stingray,3,1,Finanssiala,old
+Delicious Squirrel,Delicious Squirrel,4,1,Kaupan liitto,old
+Third Meadowlark,Third Meadowlark,6,1,Metsäteollisuus,old
+Aromatic Squirrel,Aromatic Squirrel,2,1,EVA/Etla,old
+Lewd Beaver,Lewd Beaver,6,1,Metsäteollisuus,old
+Gratis Turkey,Gratis Turkey,4,1,Kaupan liitto,old
+Fearless Hornet,Fearless Hornet,7,1,PALTA,old
+Lonely Wildcat,Lonely Wildcat,4,1,Kaupan liitto,old
+Big Barnacle,Big Barnacle,9,1,Rakennusteollisuus,old
+Disillusioned Cuckoo,Disillusioned Cuckoo,10,1,Suomen Yrittäjät,old
+Doubtful Mandrill,Doubtful Mandrill,9,1,Rakennusteollisuus,old
+Abundant Anaconda,Abundant Anaconda,10,1,Suomen Yrittäjät,old
+Woebegone Opossum,Woebegone Opossum,12,1,Teknologiateollisuus,old
+Accessible Crow,Accessible Crow,3,1,Finanssiala,old
+Aggressive Bobcat,Aggressive Bobcat,12,1,Teknologiateollisuus,old
+Cowardly Cockroach,Cowardly Cockroach,12,1,Teknologiateollisuus,old
+Nebulous Limpet,Nebulous Limpet,10,1,Suomen Yrittäjät,old
+Sharp Manatee,Sharp Manatee,5,1,Keskuskauppakamari,old
+Lethal Aardvark,Lethal Aardvark,8,1,Perheyritysten liitto,old
+Fearful Tiglon,Fearful Tiglon,6,1,Metsäteollisuus,old
+Deeply Centipede,Deeply Centipede,10,1,Suomen Yrittäjät,old
+True Hedgehog,True Hedgehog,4,1,Kaupan liitto,old
+Abhorrent Donkey,Abhorrent Donkey,13,2,Linkkaaja,link
+Tedious Badger,Tedious Badger,12,1,Teknologiateollisuus,old
+Pale Bird,Pale Bird,3,1,Finanssiala,old
+Cagey Alligator,Cagey Alligator,4,1,Kaupan liitto,old
+Three Finch,Three Finch,10,1,Suomen Yrittäjät,old
+Imaginary Bat,Imaginary Bat,10,1,Suomen Yrittäjät,old
+Rigid Finch,Rigid Finch,12,1,Teknologiateollisuus,old
+Pleasant Antelope,Pleasant Antelope,10,1,Suomen Yrittäjät,old
+Merciful Okapi,Merciful Okapi,10,1,Suomen Yrittäjät,old
+Brown Needlefish,Brown Needlefish,6,1,Metsäteollisuus,old
+Blushing Cougar,Blushing Cougar,6,1,Metsäteollisuus,old
+Electric Marsupial,Electric Marsupial,13,3,Linkkaaja,link
+Left Alpaca,Left Alpaca,9,1,Rakennusteollisuus,old
+Obscene Partridge,Obscene Partridge,9,1,Rakennusteollisuus,old
+Null Otter,Null Otter,13,2,Linkkaaja,link
+Unadvised Deer,Unadvised Deer,12,1,Teknologiateollisuus,old
+Sulky Koi,Sulky Koi,7,1,PALTA,old
+Kaput Tick,Kaput Tick,10,1,Suomen Yrittäjät,old
+Extra-Large Hornet,Extra-Large Hornet,10,1,Suomen Yrittäjät,old
+Tender Bass,Tender Bass,8,1,Perheyritysten liitto,old
+Harmonious Roadrunner,Harmonious Roadrunner,1,1,EK,old
+Sturdy Hyrax,Sturdy Hyrax,6,1,Metsäteollisuus,old
+Languid Wallaby,Languid Wallaby,2,1,EVA/Etla,old
+Ethereal Impala,Ethereal Impala,13,2,Linkkaaja,link
+Nasty Mockingbird,Nasty Mockingbird,13,2,Linkkaaja,link
+Dysfunctional Cricket,Dysfunctional Cricket,7,1,PALTA,old
+Hapless Loris,Hapless Loris,12,1,Teknologiateollisuus,old
+Prickly Gerbil,Prickly Gerbil,10,1,Suomen Yrittäjät,old
+Overconfident Antelope,Overconfident Antelope,10,1,Suomen Yrittäjät,old
+Smelly Tiglon,Smelly Tiglon,12,1,Teknologiateollisuus,old
+Quarrelsome Pig,Quarrelsome Pig,13,2,Linkkaaja,link
+Natural Hyena,Natural Hyena,10,1,Suomen Yrittäjät,old
+Daily Shark,Daily Shark,13,3,Linkkaaja,link
+Quizzical Sheep,Quizzical Sheep,13,2,Linkkaaja,link
+Wise Mule,Wise Mule,13,2,Linkkaaja,link
+Handy Quelea,Handy Quelea,13,2,Linkkaaja,link
+Guttural Crow,Guttural Crow,1,1,EK,old
+Blue-Eyed Cockroach,Blue-Eyed Cockroach,9,1,Rakennusteollisuus,old
+Naughty Human,Naughty Human,12,1,Teknologiateollisuus,old
+Domineering Antlion,Domineering Antlion,1,1,EK,old
+Waiting Baboon,Waiting Baboon,6,1,Metsäteollisuus,old
+Symptomatic Aardwolf,Symptomatic Aardwolf,10,1,Suomen Yrittäjät,old
+Fair Mockingbird,Fair Mockingbird,13,4,Linkkaaja,link
+Colorful Lion,Colorful Lion,4,1,Kaupan liitto,old
+Enormous Junglefowl,Enormous Junglefowl,13,2,Linkkaaja,link
+Arrogant Mink,Arrogant Mink,1,1,EK,old
+Rapid Mink,Rapid Mink,4,1,Kaupan liitto,old
+Reflective Crane,Reflective Crane,9,1,Rakennusteollisuus,old
+Cold Crane,Cold Crane,5,1,Keskuskauppakamari,old
+Juicy Marten,Juicy Marten,9,1,Rakennusteollisuus,old
+Filthy Coyote,Filthy Coyote,4,1,Kaupan liitto,old
+Shallow Sole,Shallow Sole,12,1,Teknologiateollisuus,old
+Thin Earwig,Thin Earwig,12,1,Teknologiateollisuus,old
+Medical Cephalopod,Medical Cephalopod,9,1,Rakennusteollisuus,old
+Quack Stork,Quack Stork,1,1,EK,old
+Far-Flung Crow,Far-Flung Crow,10,1,Suomen Yrittäjät,old
+Grotesque Shrew,Grotesque Shrew,12,1,Teknologiateollisuus,old
+Divergent Guanaco,Divergent Guanaco,8,1,Perheyritysten liitto,old
+Dysfunctional Quelea,Dysfunctional Quelea,13,2,Linkkaaja,link
+Blue-Eyed Parrot,Blue-Eyed Parrot,4,1,Kaupan liitto,old
+Workable Blackbird,Workable Blackbird,9,1,Rakennusteollisuus,old
+Dark Coyote,Dark Coyote,1,1,EK,old
+Goofy Tick,Goofy Tick,8,1,Perheyritysten liitto,old
+Elastic Cod,Elastic Cod,12,1,Teknologiateollisuus,old
+Jumpy Aardwolf,Jumpy Aardwolf,13,2,Linkkaaja,link
+Well-To-Do Crow,Well-To-Do Crow,13,3,Linkkaaja,link
+Lazy Chameleon,Lazy Chameleon,6,1,Metsäteollisuus,old
+Famous Fox,Famous Fox,6,1,Metsäteollisuus,old
+Tawdry Goldfish,Tawdry Goldfish,12,1,Teknologiateollisuus,old
+Pushy Marlin,Pushy Marlin,13,2,Linkkaaja,link
+Clear Dingo,Clear Dingo,7,1,PALTA,old
+Spiritual Human,Spiritual Human,10,1,Suomen Yrittäjät,old
+Bizarre Ibex,Bizarre Ibex,8,1,Perheyritysten liitto,old
+Delicious Swallow,Delicious Swallow,10,1,Suomen Yrittäjät,old
+Vivacious Wolf,Vivacious Wolf,7,1,PALTA,old
+Hellish Sturgeon,Hellish Sturgeon,8,1,Perheyritysten liitto,old
+Utopian Sparrow,Utopian Sparrow,6,1,Metsäteollisuus,old
+Colorful Goldfish,Colorful Goldfish,4,1,Kaupan liitto,old
+Daffy Alligator,Daffy Alligator,7,1,PALTA,old
+Selfish Dragonfly,Selfish Dragonfly,13,3,Linkkaaja,link
+Truculent Ibex,Truculent Ibex,4,1,Kaupan liitto,old
+General Bear,General Bear,10,1,Suomen Yrittäjät,old
+Unarmed Peacock,Unarmed Peacock,13,2,Linkkaaja,link
+Famous Partridge,Famous Partridge,4,1,Kaupan liitto,old
+Vigorous Ape,Vigorous Ape,13,2,Linkkaaja,link
+Irate Baboon,Irate Baboon,1,1,EK,old
+Incredible Cheetah,Incredible Cheetah,6,1,Metsäteollisuus,old
+Dreary Cricket,Dreary Cricket,10,1,Suomen Yrittäjät,old
+Towering Dove,Towering Dove,1,1,EK,old
+Fabulous Bison,Fabulous Bison,1,1,EK,old
+Wicked Orangutan,Wicked Orangutan,12,1,Teknologiateollisuus,old
+Wrong Bonobo,Wrong Bonobo,4,1,Kaupan liitto,old
+Shaky Parrotfish,Shaky Parrotfish,12,1,Teknologiateollisuus,old
+Responsible Guineafowl,Responsible Guineafowl,10,1,Suomen Yrittäjät,old
+Crowded Serval,Crowded Serval,8,1,Perheyritysten liitto,old
+Grieving Firefly,Grieving Firefly,3,1,Finanssiala,old
+Waggish Sailfish,Waggish Sailfish,9,1,Rakennusteollisuus,old
+Huge Jay,Huge Jay,13,2,Linkkaaja,link
+Recondite Weasel,Recondite Weasel,11,1,Suomen startup-yhteisö,new
+Elegant Mallard,Elegant Mallard,1,1,EK,old
+Young Mosquito,Young Mosquito,11,1,Suomen startup-yhteisö,new
+Tenuous Hornet,Tenuous Hornet,13,2,Linkkaaja,link
+Satisfying Rhinoceros,Satisfying Rhinoceros,6,1,Metsäteollisuus,old
+Holistic Lynx,Holistic Lynx,1,1,EK,old
+Fabulous Hyena,Fabulous Hyena,13,2,Linkkaaja,link
+Foamy Snail,Foamy Snail,13,4,Linkkaaja,link
+Frantic Monkey,Frantic Monkey,10,1,Suomen Yrittäjät,old
+Pointless Waterbuck,Pointless Waterbuck,10,1,Suomen Yrittäjät,old
+Fretful Mackerel,Fretful Mackerel,12,1,Teknologiateollisuus,old
+Lean Woodchuck,Lean Woodchuck,10,1,Suomen Yrittäjät,old
+Blue-Eyed Horse,Blue-Eyed Horse,12,1,Teknologiateollisuus,old
+Unsuitable Tiger,Unsuitable Tiger,13,2,Linkkaaja,link
+Tall Jackal,Tall Jackal,10,1,Suomen Yrittäjät,old
+Daily Whippet,Daily Whippet,7,1,PALTA,old
+Upset Bovid,Upset Bovid,12,1,Teknologiateollisuus,old
+Hilarious Finch,Hilarious Finch,3,1,Finanssiala,old
+Quirky Beetle,Quirky Beetle,4,1,Kaupan liitto,old
+Squalid Haddock,Squalid Haddock,7,1,PALTA,old
+Acceptable Crawdad,Acceptable Crawdad,10,1,Suomen Yrittäjät,old
+Irritating Waterbuck,Irritating Waterbuck,9,1,Rakennusteollisuus,old
+Immense Jackal,Immense Jackal,4,1,Kaupan liitto,old
+Lying Frog,Lying Frog,10,1,Suomen Yrittäjät,old
+Interesting Whippet,Interesting Whippet,1,1,EK,old
+Ludicrous Tortoise,Ludicrous Tortoise,8,1,Perheyritysten liitto,old
+Observant Vicuña,Observant Vicuña,13,2,Linkkaaja,link
+Encouraging Lemming,Encouraging Lemming,12,1,Teknologiateollisuus,old
+Feeble Fox,Feeble Fox,12,1,Teknologiateollisuus,old
+Innocent Parrotfish,Innocent Parrotfish,10,1,Suomen Yrittäjät,old
+Supreme Leopard,Supreme Leopard,3,1,Finanssiala,old
+Resolute Manatee,Resolute Manatee,4,1,Kaupan liitto,old
+Abounding Stoat,Abounding Stoat,12,1,Teknologiateollisuus,old
+Capable Scorpion,Capable Scorpion,10,1,Suomen Yrittäjät,old
+Educated Rooster,Educated Rooster,13,2,Linkkaaja,link
+Aboriginal Limpet,Aboriginal Limpet,10,1,Suomen Yrittäjät,old
+Utopian Ape,Utopian Ape,13,2,Linkkaaja,link
+Great Mule,Great Mule,1,1,EK,old
+Feigned Voalavoanala,Feigned Voalavoanala,9,1,Rakennusteollisuus,old
+Economic Quetzal,Economic Quetzal,12,1,Teknologiateollisuus,old
+Abiding Mollusk,Abiding Mollusk,9,1,Rakennusteollisuus,old
+Alluring Tarsier,Alluring Tarsier,9,1,Rakennusteollisuus,old
+Orange Barracuda,Orange Barracuda,4,1,Kaupan liitto,old
+Cloudy Numbat,Cloudy Numbat,13,2,Linkkaaja,link
+Lovely Tahr,Lovely Tahr,10,1,Suomen Yrittäjät,old
+Old Fox,Old Fox,9,1,Rakennusteollisuus,old
+Happy Frog,Happy Frog,12,1,Teknologiateollisuus,old
+Impolite Perch,Impolite Perch,13,3,Linkkaaja,link
+Aback Landfowl,Aback Landfowl,10,1,Suomen Yrittäjät,old
+Draconian Hedgehog,Draconian Hedgehog,7,1,PALTA,old
+Acrid Louse,Acrid Louse,13,2,Linkkaaja,link
+Aware Salamander,Aware Salamander,1,1,EK,old
+Penitent Elk,Penitent Elk,6,1,Metsäteollisuus,old
+Nifty Meadowlark,Nifty Meadowlark,1,1,EK,old
+Rigid Titi,Rigid Titi,10,1,Suomen Yrittäjät,old
+Cooperative Lapwing,Cooperative Lapwing,7,1,PALTA,old
+Lethal Axolotl,Lethal Axolotl,10,1,Suomen Yrittäjät,old
+Colorful Human,Colorful Human,12,1,Teknologiateollisuus,old
+Fuzzy Aardvark,Fuzzy Aardvark,8,1,Perheyritysten liitto,old
+Obeisant Bee,Obeisant Bee,7,1,PALTA,old
+Daily Rattlesnake,Daily Rattlesnake,9,1,Rakennusteollisuus,old
+Material Gopher,Material Gopher,7,1,PALTA,old
+Watery Mockingbird,Watery Mockingbird,6,1,Metsäteollisuus,old
+White Wasp,White Wasp,10,1,Suomen Yrittäjät,old
+Ajar Ermine,Ajar Ermine,7,1,PALTA,old
+Scared Hoverfly,Scared Hoverfly,10,1,Suomen Yrittäjät,old
+Dull Narwhal,Dull Narwhal,8,1,Perheyritysten liitto,old
+Cheap Minnow,Cheap Minnow,3,1,Finanssiala,old
+Ad Opossum,Ad Opossum,1,1,EK,old
+Incompetent Harrier,Incompetent Harrier,4,1,Kaupan liitto,old
+Powerful Crayfish,Powerful Crayfish,4,1,Kaupan liitto,old
+Boorish Yak,Boorish Yak,13,2,Linkkaaja,link
+Early Mink,Early Mink,8,1,Perheyritysten liitto,old
+Obeisant Squirrel,Obeisant Squirrel,2,1,EVA/Etla,old
+Quarrelsome Grasshopper,Quarrelsome Grasshopper,7,1,PALTA,old
+Ablaze Bear,Ablaze Bear,12,1,Teknologiateollisuus,old
+Tender Warbler,Tender Warbler,2,1,EVA/Etla,old
+Known Impala,Known Impala,10,1,Suomen Yrittäjät,old
+Exultant Nightingale,Exultant Nightingale,1,1,EK,old
+Solid Panther,Solid Panther,12,1,Teknologiateollisuus,old
+Misty Cat,Misty Cat,13,2,Linkkaaja,link
+Caring Piranha,Caring Piranha,10,1,Suomen Yrittäjät,old
+Precious Tarantula,Precious Tarantula,4,1,Kaupan liitto,old
+Rare Rook,Rare Rook,10,1,Suomen Yrittäjät,old
+Proud Penguin,Proud Penguin,10,1,Suomen Yrittäjät,old
+Nervous Primate,Nervous Primate,10,1,Suomen Yrittäjät,old
+Teeny Hawk,Teeny Hawk,1,1,EK,old
+Vulgar Crab,Vulgar Crab,13,2,Linkkaaja,link
+Witty Louse,Witty Louse,2,1,EVA/Etla,old
+Ubiquitous Barnacle,Ubiquitous Barnacle,12,1,Teknologiateollisuus,old
+Lying Gamefowl,Lying Gamefowl,12,1,Teknologiateollisuus,old
+Modern Quail,Modern Quail,6,1,Metsäteollisuus,old
+Interesting Goat,Interesting Goat,1,1,EK,old
+Serious Anaconda,Serious Anaconda,1,1,EK,old
+Omniscient Whippet,Omniscient Whippet,3,1,Finanssiala,old
+Momentous Ladybug,Momentous Ladybug,12,1,Teknologiateollisuus,old
+Ahead Ostrich,Ahead Ostrich,10,1,Suomen Yrittäjät,old
+Parsimonious Stingray,Parsimonious Stingray,4,1,Kaupan liitto,old
+Possible Turtle,Possible Turtle,10,1,Suomen Yrittäjät,old
+Trite Whitefish,Trite Whitefish,6,1,Metsäteollisuus,old
+Madly Mammal,Madly Mammal,12,1,Teknologiateollisuus,old
+Remarkable Pinniped,Remarkable Pinniped,9,1,Rakennusteollisuus,old
+Difficult Cougar,Difficult Cougar,6,1,Metsäteollisuus,old
+Royal Grasshopper,Royal Grasshopper,13,2,Linkkaaja,link
+Garrulous Toucan,Garrulous Toucan,10,1,Suomen Yrittäjät,old
+Forgetful Rat,Forgetful Rat,9,1,Rakennusteollisuus,old
+Lonely Lemming,Lonely Lemming,10,1,Suomen Yrittäjät,old
+Spiffy Tiglon,Spiffy Tiglon,1,1,EK,old
+Bright Falcon,Bright Falcon,6,1,Metsäteollisuus,old
+Naive Scorpion,Naive Scorpion,3,1,Finanssiala,old
+Rapid Stoat,Rapid Stoat,12,1,Teknologiateollisuus,old
+Helpful Vicuña,Helpful Vicuña,9,1,Rakennusteollisuus,old
+Violent Sailfish,Violent Sailfish,1,1,EK,old
+Cloistered Beaver,Cloistered Beaver,10,1,Suomen Yrittäjät,old
+Bawdy Pig,Bawdy Pig,13,3,Linkkaaja,link
+Fascinated Constrictor,Fascinated Constrictor,9,1,Rakennusteollisuus,old
+Cuddly Llama,Cuddly Llama,6,1,Metsäteollisuus,old
+Well-Made Mollusk,Well-Made Mollusk,6,1,Metsäteollisuus,old
+Skillful Raven,Skillful Raven,1,1,EK,old
+Tan Octopus,Tan Octopus,10,1,Suomen Yrittäjät,old
+Giddy Caribou,Giddy Caribou,13,2,Linkkaaja,link
+Classy Vixen,Classy Vixen,13,2,Linkkaaja,link
+Equable Mouse,Equable Mouse,9,1,Rakennusteollisuus,old
+Adaptable Panda,Adaptable Panda,13,2,Linkkaaja,link
+Thankful Toucan,Thankful Toucan,4,1,Kaupan liitto,old
+Acceptable Monkey,Acceptable Monkey,5,1,Keskuskauppakamari,old
+Jittery Goose,Jittery Goose,6,1,Metsäteollisuus,old
+Satisfying Wildcat,Satisfying Wildcat,8,1,Perheyritysten liitto,old
+Political Bison,Political Bison,6,1,Metsäteollisuus,old
+Ugly Mockingbird,Ugly Mockingbird,13,2,Linkkaaja,link
+Damaged Dragonfly,Damaged Dragonfly,6,1,Metsäteollisuus,old
+Madly Prawn,Madly Prawn,4,1,Kaupan liitto,old
+Dramatic Barracuda,Dramatic Barracuda,13,2,Linkkaaja,link
+Omniscient Reptile,Omniscient Reptile,7,1,PALTA,old
+Mindless Slug,Mindless Slug,12,1,Teknologiateollisuus,old
+Three Planarian,Three Planarian,10,1,Suomen Yrittäjät,old
+Gullible Wildfowl,Gullible Wildfowl,6,1,Metsäteollisuus,old
+Sick Titi,Sick Titi,9,1,Rakennusteollisuus,old
+Ceaseless Weasel,Ceaseless Weasel,9,1,Rakennusteollisuus,old
+Murky Magpie,Murky Magpie,1,1,EK,old
+Best Dragon,Best Dragon,12,1,Teknologiateollisuus,old
+Tall Rhinoceros,Tall Rhinoceros,7,1,PALTA,old
+Lame Badger,Lame Badger,13,2,Linkkaaja,link
+Adhesive Ladybug,Adhesive Ladybug,13,2,Linkkaaja,link
+Truthful Guineafowl,Truthful Guineafowl,10,1,Suomen Yrittäjät,old
+Squeamish Anaconda,Squeamish Anaconda,2,1,EVA/Etla,old
+Tenuous Marmoset,Tenuous Marmoset,9,1,Rakennusteollisuus,old
+Well-Off Sloth,Well-Off Sloth,12,1,Teknologiateollisuus,old
+Hilarious Cow,Hilarious Cow,7,1,PALTA,old
+Ratty Kite,Ratty Kite,1,1,EK,old
+Thundering Lapwing,Thundering Lapwing,12,1,Teknologiateollisuus,old
+Two Hoverfly,Two Hoverfly,13,2,Linkkaaja,link
+Shaggy Bass,Shaggy Bass,8,1,Perheyritysten liitto,old
+Unknown Wildebeest,Unknown Wildebeest,12,1,Teknologiateollisuus,old
+Lackadaisical Meadowlark,Lackadaisical Meadowlark,9,1,Rakennusteollisuus,old
+Protective Lemming,Protective Lemming,6,1,Metsäteollisuus,old
+Faded Blackbird,Faded Blackbird,12,1,Teknologiateollisuus,old
+Well-Off Magpie,Well-Off Magpie,13,3,Linkkaaja,link
+Electric Bonobo,Electric Bonobo,5,1,Keskuskauppakamari,old
+Aberrant Stingray,Aberrant Stingray,13,2,Linkkaaja,link
+Lamentable Bandicoot,Lamentable Bandicoot,12,1,Teknologiateollisuus,old
+Demonic Loris,Demonic Loris,12,1,Teknologiateollisuus,old
+Unknown Antlion,Unknown Antlion,13,3,Linkkaaja,link
+Same Lemming,Same Lemming,9,1,Rakennusteollisuus,old
+Misty Marlin,Misty Marlin,9,1,Rakennusteollisuus,old
+Talented Caterpillar,Talented Caterpillar,6,1,Metsäteollisuus,old
+Hellish Falcon,Hellish Falcon,10,1,Suomen Yrittäjät,old
+Six Clam,Six Clam,7,1,PALTA,old
+Four Kiwi,Four Kiwi,12,1,Teknologiateollisuus,old
+Measly Reptile,Measly Reptile,9,1,Rakennusteollisuus,old
+Ceaseless Catshark,Ceaseless Catshark,10,1,Suomen Yrittäjät,old
+Green Roundworm,Green Roundworm,1,1,EK,old
+Parsimonious Coral,Parsimonious Coral,1,1,EK,old
+Hurried Hyrax,Hurried Hyrax,5,1,Keskuskauppakamari,old
+Fertile Mammal,Fertile Mammal,10,1,Suomen Yrittäjät,old
+Observant Cockroach,Observant Cockroach,10,1,Suomen Yrittäjät,old
+Verdant Halibut,Verdant Halibut,10,1,Suomen Yrittäjät,old
+Adjoining Eel,Adjoining Eel,4,1,Kaupan liitto,old
+Roasted Vulture,Roasted Vulture,13,2,Linkkaaja,link
+Literate Halibut,Literate Halibut,13,2,Linkkaaja,link
+Nauseating Dove,Nauseating Dove,13,3,Linkkaaja,link
+Familiar Lamprey,Familiar Lamprey,1,1,EK,old
+Standing Grebe,Standing Grebe,4,1,Kaupan liitto,old
+Hissing Tortoise,Hissing Tortoise,11,1,Suomen startup-yhteisö,new
+Defeated Beetle,Defeated Beetle,9,1,Rakennusteollisuus,old
+Precious Parrot,Precious Parrot,10,1,Suomen Yrittäjät,old
+Happy Kangaroo,Happy Kangaroo,10,1,Suomen Yrittäjät,old
+Bloody Gull,Bloody Gull,13,2,Linkkaaja,link
+Overrated Clownfish,Overrated Clownfish,12,1,Teknologiateollisuus,old
+Pink Lamprey,Pink Lamprey,7,1,PALTA,old
+Hypnotic Panther,Hypnotic Panther,4,1,Kaupan liitto,old
+Orange Dingo,Orange Dingo,10,1,Suomen Yrittäjät,old
+Amazing Alpaca,Amazing Alpaca,10,1,Suomen Yrittäjät,old
+Blue-Eyed Egret,Blue-Eyed Egret,4,1,Kaupan liitto,old
+Highfalutin Gull,Highfalutin Gull,13,4,Linkkaaja,link
+Nifty Roadrunner,Nifty Roadrunner,13,2,Linkkaaja,link
+Sore Elephant,Sore Elephant,6,1,Metsäteollisuus,old
+Highfalutin Capybara,Highfalutin Capybara,1,1,EK,old
+Tawdry Gopher,Tawdry Gopher,9,1,Rakennusteollisuus,old
+Flimsy Alligator,Flimsy Alligator,13,2,Linkkaaja,link
+Tiresome Salamander,Tiresome Salamander,6,1,Metsäteollisuus,old
+Observant Lynx,Observant Lynx,6,1,Metsäteollisuus,old
+Aspiring Hornet,Aspiring Hornet,13,2,Linkkaaja,link
+Knowledgeable Sheep,Knowledgeable Sheep,12,1,Teknologiateollisuus,old
+Crooked Lionfish,Crooked Lionfish,5,1,Keskuskauppakamari,old
+Jaded Reptile,Jaded Reptile,1,1,EK,old
+Gifted Mallard,Gifted Mallard,9,1,Rakennusteollisuus,old
+Overconfident Coypu,Overconfident Coypu,13,2,Linkkaaja,link
+Kaput Locust,Kaput Locust,4,1,Kaupan liitto,old
+Meaty Walrus,Meaty Walrus,13,3,Linkkaaja,link
+Fabulous Turtle,Fabulous Turtle,12,1,Teknologiateollisuus,old
+Prickly Lamprey,Prickly Lamprey,12,1,Teknologiateollisuus,old
+Wealthy Koi,Wealthy Koi,10,1,Suomen Yrittäjät,old
+Petite Gerbil,Petite Gerbil,10,1,Suomen Yrittäjät,old
+Adventurous Goat,Adventurous Goat,1,1,EK,old
+Gainful Shark,Gainful Shark,6,1,Metsäteollisuus,old
+Foregoing Canid,Foregoing Canid,3,1,Finanssiala,old
+Quizzical Cod,Quizzical Cod,6,1,Metsäteollisuus,old
+Colossal Whale,Colossal Whale,10,1,Suomen Yrittäjät,old
+Greasy Zebra,Greasy Zebra,1,1,EK,old
+Poised Prawn,Poised Prawn,6,1,Metsäteollisuus,old
+Makeshift Vole,Makeshift Vole,5,1,Keskuskauppakamari,old
+Scandalous Gorilla,Scandalous Gorilla,6,1,Metsäteollisuus,old
+Burly Toucan,Burly Toucan,10,1,Suomen Yrittäjät,old
+Simple Anglerfish,Simple Anglerfish,1,1,EK,old
+Eager Parakeet,Eager Parakeet,10,1,Suomen Yrittäjät,old
+Solid Penguin,Solid Penguin,9,1,Rakennusteollisuus,old
+Chemical Leopard,Chemical Leopard,12,1,Teknologiateollisuus,old
+Dispensable Wren,Dispensable Wren,3,1,Finanssiala,old
+Flimsy Cougar,Flimsy Cougar,1,1,EK,old
+Plastic Bandicoot,Plastic Bandicoot,7,1,PALTA,old
+Wiry Amphibian,Wiry Amphibian,13,2,Linkkaaja,link
+Impolite Sturgeon,Impolite Sturgeon,12,1,Teknologiateollisuus,old
+General Galliform,General Galliform,10,1,Suomen Yrittäjät,old
+Coherent Sawfish,Coherent Sawfish,1,1,EK,old
+Versed Barnacle,Versed Barnacle,10,1,Suomen Yrittäjät,old
+Concerned Pheasant,Concerned Pheasant,7,1,PALTA,old
+Delightful Beetle,Delightful Beetle,5,1,Keskuskauppakamari,old
+Half Turkey,Half Turkey,10,1,Suomen Yrittäjät,old
+Hot Coyote,Hot Coyote,10,1,Suomen Yrittäjät,old
+Jumpy Cattle,Jumpy Cattle,1,1,EK,old
+Fluffy Squid,Fluffy Squid,10,1,Suomen Yrittäjät,old
+Staking Snake,Staking Snake,1,1,EK,old
+Uncovered Limpet,Uncovered Limpet,12,1,Teknologiateollisuus,old
+Icky Giraffe,Icky Giraffe,10,1,Suomen Yrittäjät,old
+Thoughtless Lemming,Thoughtless Lemming,10,1,Suomen Yrittäjät,old
+Sable Horse,Sable Horse,8,1,Perheyritysten liitto,old
+Purring Alpaca,Purring Alpaca,13,3,Linkkaaja,link
+Wild Pig,Wild Pig,10,1,Suomen Yrittäjät,old
+Breezy Swordfish,Breezy Swordfish,6,1,Metsäteollisuus,old
+Aberrant Sawfish,Aberrant Sawfish,10,1,Suomen Yrittäjät,old
+Mountainous Barracuda,Mountainous Barracuda,9,1,Rakennusteollisuus,old
+Gratis Haddock,Gratis Haddock,9,1,Rakennusteollisuus,old
+Milky Wren,Milky Wren,4,1,Kaupan liitto,old
+Fearful Axolotl,Fearful Axolotl,10,1,Suomen Yrittäjät,old
+Salty Mongoose,Salty Mongoose,9,1,Rakennusteollisuus,old
+Vacuous Raven,Vacuous Raven,8,1,Perheyritysten liitto,old
+Loutish Finch,Loutish Finch,1,1,EK,old
+Painful Swallow,Painful Swallow,10,1,Suomen Yrittäjät,old
+Jobless Fox,Jobless Fox,5,1,Keskuskauppakamari,old
+Rough Gull,Rough Gull,6,1,Metsäteollisuus,old
+Sincere Stingray,Sincere Stingray,7,1,PALTA,old
+Secretive Bobcat,Secretive Bobcat,13,2,Linkkaaja,link
+Bawdy Salamander,Bawdy Salamander,7,1,PALTA,old
+Healthy Goat,Healthy Goat,10,1,Suomen Yrittäjät,old
+Impartial Anteater,Impartial Anteater,6,1,Metsäteollisuus,old
+Inexpensive Impala,Inexpensive Impala,9,1,Rakennusteollisuus,old
+Rustic Catshark,Rustic Catshark,6,1,Metsäteollisuus,old
+Terrific Bass,Terrific Bass,9,1,Rakennusteollisuus,old
+Hurried Reindeer,Hurried Reindeer,4,1,Kaupan liitto,old
+Aback Kite,Aback Kite,10,1,Suomen Yrittäjät,old
+Painful Landfowl,Painful Landfowl,4,1,Kaupan liitto,old
+Descriptive Eel,Descriptive Eel,1,1,EK,old
+Hateful Quokka,Hateful Quokka,10,1,Suomen Yrittäjät,old
+Bashful Beaver,Bashful Beaver,7,1,PALTA,old
+Chilly Weasel,Chilly Weasel,2,1,EVA/Etla,old
+Unarmed Elk,Unarmed Elk,10,1,Suomen Yrittäjät,old
+Automatic Xerinae,Automatic Xerinae,4,1,Kaupan liitto,old
+Lethal Thrush,Lethal Thrush,3,1,Finanssiala,old
+Tart Cobra,Tart Cobra,12,1,Teknologiateollisuus,old
+Assorted Hamster,Assorted Hamster,8,1,Perheyritysten liitto,old
+Boring Owl,Boring Owl,4,1,Kaupan liitto,old
+Dangerous Bandicoot,Dangerous Bandicoot,7,1,PALTA,old
+Expensive Lark,Expensive Lark,13,3,Linkkaaja,link
+Motionless Booby,Motionless Booby,7,1,PALTA,old
+Idiotic Loon,Idiotic Loon,13,3,Linkkaaja,link
+Foolish Caribou,Foolish Caribou,13,2,Linkkaaja,link
+Majestic Bat,Majestic Bat,13,2,Linkkaaja,link
+Fast Fly,Fast Fly,12,1,Teknologiateollisuus,old
+Cloudy Gamefowl,Cloudy Gamefowl,3,1,Finanssiala,old
+Previous Jay,Previous Jay,7,1,PALTA,old
+Exultant Hornet,Exultant Hornet,10,1,Suomen Yrittäjät,old
+Foolish Spider,Foolish Spider,1,1,EK,old
+Fearful Serval,Fearful Serval,1,1,EK,old
+Piquant Fox,Piquant Fox,1,1,EK,old
+Hanging Flyingfish,Hanging Flyingfish,8,1,Perheyritysten liitto,old
+Plausible Parrot,Plausible Parrot,13,3,Linkkaaja,link
+Questionable Kangaroo,Questionable Kangaroo,13,2,Linkkaaja,link
+Acidic Horse,Acidic Horse,10,1,Suomen Yrittäjät,old
+Outgoing Vole,Outgoing Vole,4,1,Kaupan liitto,old
+Other Marsupial,Other Marsupial,10,1,Suomen Yrittäjät,old
+Purring Albatross,Purring Albatross,6,1,Metsäteollisuus,old
+Daily Olingo,Daily Olingo,1,1,EK,old
+Tight Albatross,Tight Albatross,1,1,EK,old
+Caring Hyena,Caring Hyena,3,1,Finanssiala,old
+Green Minnow,Green Minnow,1,1,EK,old
+Accurate Crow,Accurate Crow,10,1,Suomen Yrittäjät,old
+Dysfunctional Rhinoceros,Dysfunctional Rhinoceros,13,2,Linkkaaja,link
+Abstracted Walrus,Abstracted Walrus,13,3,Linkkaaja,link
+Pretty Catshark,Pretty Catshark,12,1,Teknologiateollisuus,old
+Breeze Bovid,Breeze Bovid,3,1,Finanssiala,old
+Jazzy Armadillo,Jazzy Armadillo,10,1,Suomen Yrittäjät,old
+Gentle Squirrel,Gentle Squirrel,12,1,Teknologiateollisuus,old
+Simple Swift,Simple Swift,12,1,Teknologiateollisuus,old
+Demonic Lamprey,Demonic Lamprey,4,1,Kaupan liitto,old
+Curvy Woodpecker,Curvy Woodpecker,10,1,Suomen Yrittäjät,old
+Super Reptile,Super Reptile,1,1,EK,old
+New Antelope,New Antelope,1,1,EK,old
+Oval Voalavoanala,Oval Voalavoanala,8,1,Perheyritysten liitto,old
+Fixed Dhole,Fixed Dhole,3,1,Finanssiala,old
+Wandering Cod,Wandering Cod,12,1,Teknologiateollisuus,old
+Mushy Dingo,Mushy Dingo,8,1,Perheyritysten liitto,old
+Fabulous Lemming,Fabulous Lemming,6,1,Metsäteollisuus,old
+Bawdy Aardwolf,Bawdy Aardwolf,7,1,PALTA,old
+Soggy Numbat,Soggy Numbat,13,2,Linkkaaja,link
+Cultured Jacana,Cultured Jacana,8,1,Perheyritysten liitto,old
+Squealing Cat,Squealing Cat,1,1,EK,old
+Secretive Pike,Secretive Pike,13,3,Linkkaaja,link
+Bashful Booby,Bashful Booby,10,1,Suomen Yrittäjät,old
+Itchy Swordfish,Itchy Swordfish,6,1,Metsäteollisuus,old
+Actually Spoonbill,Actually Spoonbill,2,1,EVA/Etla,old
+Guttural Muskox,Guttural Muskox,1,1,EK,old
+Optimal Blackbird,Optimal Blackbird,1,1,EK,old
+Light Starfish,Light Starfish,1,1,EK,old
+Uncovered Lemming,Uncovered Lemming,13,2,Linkkaaja,link
+Elegant Platypus,Elegant Platypus,1,1,EK,old
+Dead Narwhal,Dead Narwhal,13,2,Linkkaaja,link
+Wasteful Flyingfish,Wasteful Flyingfish,1,1,EK,old
+Worried Mouse,Worried Mouse,10,1,Suomen Yrittäjät,old
+Hulking Swordfish,Hulking Swordfish,13,3,Linkkaaja,link
+Vast Swallow,Vast Swallow,5,1,Keskuskauppakamari,old
+Solid Rodent,Solid Rodent,1,1,EK,old
+Jazzy Swan,Jazzy Swan,13,2,Linkkaaja,link
+Quiet Shrimp,Quiet Shrimp,6,1,Metsäteollisuus,old
+Nappy Boa,Nappy Boa,7,1,PALTA,old
+Jumpy Gull,Jumpy Gull,3,1,Finanssiala,old
+Labored Mouse,Labored Mouse,10,1,Suomen Yrittäjät,old
+Statuesque Camel,Statuesque Camel,12,1,Teknologiateollisuus,old
+Debonair Hippopotamus,Debonair Hippopotamus,6,1,Metsäteollisuus,old
+Pushy Hummingbird,Pushy Hummingbird,10,1,Suomen Yrittäjät,old
+Abrasive Cod,Abrasive Cod,13,2,Linkkaaja,link
+Short Ant,Short Ant,12,1,Teknologiateollisuus,old
+Premium Xerinae,Premium Xerinae,13,2,Linkkaaja,link
+Enchanting Lionfish,Enchanting Lionfish,10,1,Suomen Yrittäjät,old
+Heartbreaking Loon,Heartbreaking Loon,10,1,Suomen Yrittäjät,old
+Parched Lamprey,Parched Lamprey,10,1,Suomen Yrittäjät,old
+Dramatic Wildfowl,Dramatic Wildfowl,8,1,Perheyritysten liitto,old
+Fixed Heron,Fixed Heron,10,1,Suomen Yrittäjät,old
+Absurd Fish,Absurd Fish,9,1,Rakennusteollisuus,old
+Halting Rodent,Halting Rodent,4,1,Kaupan liitto,old
+Perpetual Snail,Perpetual Snail,12,1,Teknologiateollisuus,old
+Awake Starfish,Awake Starfish,4,1,Kaupan liitto,old
+Feeble Swordtail,Feeble Swordtail,1,1,EK,old
+Common Vixen,Common Vixen,9,1,Rakennusteollisuus,old
+Elderly Horse,Elderly Horse,4,1,Kaupan liitto,old
+Deadpan Galliform,Deadpan Galliform,9,1,Rakennusteollisuus,old
+Reminiscent Vulture,Reminiscent Vulture,4,1,Kaupan liitto,old
+True Lobster,True Lobster,12,1,Teknologiateollisuus,old
+Vigorous Lynx,Vigorous Lynx,13,2,Linkkaaja,link
+Secretive Puffin,Secretive Puffin,10,1,Suomen Yrittäjät,old
+Lowly Hoverfly,Lowly Hoverfly,10,1,Suomen Yrittäjät,old
+Addicted Mouse,Addicted Mouse,13,3,Linkkaaja,link
+Smiling Moth,Smiling Moth,13,2,Linkkaaja,link
+Unwieldy Bobcat,Unwieldy Bobcat,9,1,Rakennusteollisuus,old
+Sparse Wren,Sparse Wren,7,1,PALTA,old
+Brown Moose,Brown Moose,4,1,Kaupan liitto,old
+Guttural Guan,Guttural Guan,1,1,EK,old
+Crowded Nighthawk,Crowded Nighthawk,12,1,Teknologiateollisuus,old
+Squalid Kite,Squalid Kite,6,1,Metsäteollisuus,old
+Hideous Wren,Hideous Wren,11,1,Suomen startup-yhteisö,new
+Abrupt Sailfish,Abrupt Sailfish,13,2,Linkkaaja,link
+Careless Leopard,Careless Leopard,3,1,Finanssiala,old
+Spiteful Hawk,Spiteful Hawk,4,1,Kaupan liitto,old
+Anxious Falcon,Anxious Falcon,13,4,Linkkaaja,link
+Heavy Scallop,Heavy Scallop,4,1,Kaupan liitto,old
+Vacuous Ermine,Vacuous Ermine,12,1,Teknologiateollisuus,old
+Smoggy Octopus,Smoggy Octopus,5,1,Keskuskauppakamari,old
+Wrathful Cockroach,Wrathful Cockroach,5,1,Keskuskauppakamari,old
+Green Crocodile,Green Crocodile,1,1,EK,old
+Ragged Bovid,Ragged Bovid,13,2,Linkkaaja,link
+Awful Salamander,Awful Salamander,10,1,Suomen Yrittäjät,old
+Hospitable Alpaca,Hospitable Alpaca,4,1,Kaupan liitto,old
+Flawless Barnacle,Flawless Barnacle,9,1,Rakennusteollisuus,old
+Hateful Panther,Hateful Panther,1,1,EK,old
+Like Guanaco,Like Guanaco,9,1,Rakennusteollisuus,old
+Deep Quelea,Deep Quelea,4,1,Kaupan liitto,old
+Private Impala,Private Impala,10,1,Suomen Yrittäjät,old
+Knotty Jellyfish,Knotty Jellyfish,10,1,Suomen Yrittäjät,old
+Momentous Dragonfly,Momentous Dragonfly,10,1,Suomen Yrittäjät,old
+Unusual Porcupine,Unusual Porcupine,1,1,EK,old
+Pumped Owl,Pumped Owl,10,1,Suomen Yrittäjät,old
+Ambitious Meadowlark,Ambitious Meadowlark,7,1,PALTA,old
+Sudden Moose,Sudden Moose,10,1,Suomen Yrittäjät,old
+Penitent Newt,Penitent Newt,13,2,Linkkaaja,link
+Sneaky Starfish,Sneaky Starfish,12,1,Teknologiateollisuus,old
+Soggy Primate,Soggy Primate,4,1,Kaupan liitto,old
+Ethereal Flyingfish,Ethereal Flyingfish,13,2,Linkkaaja,link
+Animated Krill,Animated Krill,4,1,Kaupan liitto,old
+Outgoing Duck,Outgoing Duck,9,1,Rakennusteollisuus,old
+Innate Mockingbird,Innate Mockingbird,10,1,Suomen Yrittäjät,old
+Sweltering Numbat,Sweltering Numbat,13,2,Linkkaaja,link
+Psychedelic Alpaca,Psychedelic Alpaca,9,1,Rakennusteollisuus,old
+Depressed Mammal,Depressed Mammal,13,4,Linkkaaja,link
+Protective Orangutan,Protective Orangutan,10,1,Suomen Yrittäjät,old
+Eager Leopon,Eager Leopon,1,1,EK,old
+Spicy Walrus,Spicy Walrus,12,1,Teknologiateollisuus,old
+Second-Hand Bobcat,Second-Hand Bobcat,13,2,Linkkaaja,link
+Yummy Pinniped,Yummy Pinniped,6,1,Metsäteollisuus,old
+Versed Fish,Versed Fish,9,1,Rakennusteollisuus,old
+Aromatic Blackbird,Aromatic Blackbird,10,1,Suomen Yrittäjät,old
+Decisive Falcon,Decisive Falcon,7,1,PALTA,old
+Reflective Worm,Reflective Worm,4,1,Kaupan liitto,old
+Superb Mosquito,Superb Mosquito,1,1,EK,old
+Efficacious Marmoset,Efficacious Marmoset,1,1,EK,old
+Stormy Fennec,Stormy Fennec,9,1,Rakennusteollisuus,old
+Frail Bobcat,Frail Bobcat,10,1,Suomen Yrittäjät,old
+Coherent Condor,Coherent Condor,10,1,Suomen Yrittäjät,old
+Enthusiastic Rabbit,Enthusiastic Rabbit,4,1,Kaupan liitto,old
+Rebel Shrew,Rebel Shrew,13,2,Linkkaaja,link
+Stupid Mongoose,Stupid Mongoose,4,1,Kaupan liitto,old
+Vengeful Kingfisher,Vengeful Kingfisher,3,1,Finanssiala,old
+Damaged Partridge,Damaged Partridge,6,1,Metsäteollisuus,old
+Attractive Tiglon,Attractive Tiglon,12,1,Teknologiateollisuus,old
+Resolute Toad,Resolute Toad,6,1,Metsäteollisuus,old
+Adorable Trout,Adorable Trout,10,1,Suomen Yrittäjät,old
+Absurd Buzzard,Absurd Buzzard,13,2,Linkkaaja,link
+Harmonious Lobster,Harmonious Lobster,12,1,Teknologiateollisuus,old
+Torpid Salmon,Torpid Salmon,2,1,EVA/Etla,old
+Mere Caterpillar,Mere Caterpillar,13,2,Linkkaaja,link
+Staking Booby,Staking Booby,13,2,Linkkaaja,link
+Diligent Whale,Diligent Whale,7,1,PALTA,old
+Grouchy Wasp,Grouchy Wasp,10,1,Suomen Yrittäjät,old
+Stimulating Tiglon,Stimulating Tiglon,12,1,Teknologiateollisuus,old
+Absurd Swan,Absurd Swan,13,2,Linkkaaja,link
+Bloody Skink,Bloody Skink,13,2,Linkkaaja,link
+Offbeat Gerbil,Offbeat Gerbil,4,1,Kaupan liitto,old
+Near Barracuda,Near Barracuda,12,1,Teknologiateollisuus,old
+Longing Mole,Longing Mole,10,1,Suomen Yrittäjät,old
+Spotted Loon,Spotted Loon,1,1,EK,old
+Meaty Leopon,Meaty Leopon,4,1,Kaupan liitto,old
+Imaginary Earthworm,Imaginary Earthworm,6,1,Metsäteollisuus,old
+Feigned Skink,Feigned Skink,12,1,Teknologiateollisuus,old
+Spotted Octopus,Spotted Octopus,6,1,Metsäteollisuus,old
+Flippant Vixen,Flippant Vixen,4,1,Kaupan liitto,old
+Shaggy Elephant,Shaggy Elephant,4,1,Kaupan liitto,old
+Regular Nighthawk,Regular Nighthawk,8,1,Perheyritysten liitto,old
+Successful Pelican,Successful Pelican,3,1,Finanssiala,old
+Obeisant Termite,Obeisant Termite,13,3,Linkkaaja,link
+Interesting Spider,Interesting Spider,1,1,EK,old
+Fortunate Vixen,Fortunate Vixen,13,2,Linkkaaja,link
+Gaping Louse,Gaping Louse,10,1,Suomen Yrittäjät,old
+Wonderful Dodo,Wonderful Dodo,13,2,Linkkaaja,link
+Elfin Bandicoot,Elfin Bandicoot,13,3,Linkkaaja,link
+Spurious Nightingale,Spurious Nightingale,7,1,PALTA,old
+Screeching Cephalopod,Screeching Cephalopod,13,2,Linkkaaja,link
+Quixotic Macaw,Quixotic Macaw,7,1,PALTA,old
+Synonymous Primate,Synonymous Primate,8,1,Perheyritysten liitto,old
+Calculating Bass,Calculating Bass,4,1,Kaupan liitto,old
+Shut Heron,Shut Heron,13,2,Linkkaaja,link
+Worthless Cheetah,Worthless Cheetah,13,3,Linkkaaja,link
+Panoramic Lungfish,Panoramic Lungfish,3,1,Finanssiala,old
+Tenuous Vicuña,Tenuous Vicuña,10,1,Suomen Yrittäjät,old
+Vague Zebra,Vague Zebra,4,1,Kaupan liitto,old
+Dashing Dhole,Dashing Dhole,9,1,Rakennusteollisuus,old
+Utter Termite,Utter Termite,10,1,Suomen Yrittäjät,old
+Secret Chameleon,Secret Chameleon,10,1,Suomen Yrittäjät,old
+Exuberant Dog,Exuberant Dog,10,1,Suomen Yrittäjät,old
+Dusty Worm,Dusty Worm,10,1,Suomen Yrittäjät,old
+Wonderful Prawn,Wonderful Prawn,5,1,Keskuskauppakamari,old
+Divergent Koala,Divergent Koala,9,1,Rakennusteollisuus,old
+Sharp Mastodon,Sharp Mastodon,9,1,Rakennusteollisuus,old
+Violent Wolverine,Violent Wolverine,13,4,Linkkaaja,link
+Moaning Rook,Moaning Rook,13,2,Linkkaaja,link
+Wacky Quetzal,Wacky Quetzal,12,1,Teknologiateollisuus,old
+Glamorous Goose,Glamorous Goose,6,1,Metsäteollisuus,old
+Possible Earthworm,Possible Earthworm,10,1,Suomen Yrittäjät,old
+Sedate Armadillo,Sedate Armadillo,9,1,Rakennusteollisuus,old
+Mixed Stingray,Mixed Stingray,10,1,Suomen Yrittäjät,old
+Frequent Buzzard,Frequent Buzzard,10,1,Suomen Yrittäjät,old
+Two Okapi,Two Okapi,4,1,Kaupan liitto,old
+Alike Badger,Alike Badger,8,1,Perheyritysten liitto,old
+Confused Lizard,Confused Lizard,6,1,Metsäteollisuus,old
+Brawny Crayfish,Brawny Crayfish,8,1,Perheyritysten liitto,old
+Abrupt Scallop,Abrupt Scallop,3,1,Finanssiala,old
+Fallacious Asp,Fallacious Asp,6,1,Metsäteollisuus,old
+Direful Guanaco,Direful Guanaco,4,1,Kaupan liitto,old
+Tremendous Cod,Tremendous Cod,3,1,Finanssiala,old
+Organic Lungfish,Organic Lungfish,10,1,Suomen Yrittäjät,old
+Evanescent Cougar,Evanescent Cougar,12,1,Teknologiateollisuus,old
+Slimy Bobolink,Slimy Bobolink,10,1,Suomen Yrittäjät,old
+Well-Groomed Penguin,Well-Groomed Penguin,12,1,Teknologiateollisuus,old
+Strong Needlefish,Strong Needlefish,13,2,Linkkaaja,link
+Righteous Catfish,Righteous Catfish,1,1,EK,old
+Bite-Sized Rook,Bite-Sized Rook,10,1,Suomen Yrittäjät,old
+Overwrought Zebu,Overwrought Zebu,9,1,Rakennusteollisuus,old
+Dramatic Cuckoo,Dramatic Cuckoo,10,1,Suomen Yrittäjät,old
+Nimble Slug,Nimble Slug,7,1,PALTA,old
+Sparkling Primate,Sparkling Primate,6,1,Metsäteollisuus,old
+Quixotic Squirrel,Quixotic Squirrel,10,1,Suomen Yrittäjät,old
+Piquant Hyena,Piquant Hyena,8,1,Perheyritysten liitto,old
+Fumbling Lemur,Fumbling Lemur,8,1,Perheyritysten liitto,old
+Placid Thrush,Placid Thrush,7,1,PALTA,old
+Weak Tarantula,Weak Tarantula,3,1,Finanssiala,old
+Military Iguana,Military Iguana,6,1,Metsäteollisuus,old
+Ratty Booby,Ratty Booby,10,1,Suomen Yrittäjät,old
+Literate Parrot,Literate Parrot,10,1,Suomen Yrittäjät,old
+Same Tiger,Same Tiger,1,1,EK,old
+Luxuriant Skunk,Luxuriant Skunk,7,1,PALTA,old
+Stingy Planarian,Stingy Planarian,13,4,Linkkaaja,link
+Macabre Vaquita,Macabre Vaquita,4,1,Kaupan liitto,old
+Whimsical Panther,Whimsical Panther,10,1,Suomen Yrittäjät,old
+Tangible Booby,Tangible Booby,6,1,Metsäteollisuus,old
+Learned Olingo,Learned Olingo,12,1,Teknologiateollisuus,old
+Marvelous Loon,Marvelous Loon,9,1,Rakennusteollisuus,old
+Pretty Llama,Pretty Llama,10,1,Suomen Yrittäjät,old
+Imminent Horse,Imminent Horse,10,1,Suomen Yrittäjät,old
+Absurd Fly,Absurd Fly,4,1,Kaupan liitto,old
+Gorgeous Condor,Gorgeous Condor,4,1,Kaupan liitto,old
+Dusty Ibex,Dusty Ibex,10,1,Suomen Yrittäjät,old
+Nutty Koala,Nutty Koala,8,1,Perheyritysten liitto,old
+Ill-Fated Flamingo,Ill-Fated Flamingo,10,1,Suomen Yrittäjät,old
+Abandoned Coral,Abandoned Coral,13,4,Linkkaaja,link
+Adventurous Roadrunner,Adventurous Roadrunner,10,1,Suomen Yrittäjät,old
+Energetic Newt,Energetic Newt,10,1,Suomen Yrittäjät,old
+Mighty Silverfish,Mighty Silverfish,10,1,Suomen Yrittäjät,old
+Obedient Ostrich,Obedient Ostrich,6,1,Metsäteollisuus,old
+Hollow Chickadee,Hollow Chickadee,3,1,Finanssiala,old
+Cooing Tiglon,Cooing Tiglon,7,1,PALTA,old
+Cagey Warbler,Cagey Warbler,10,1,Suomen Yrittäjät,old
+Pricey Asp,Pricey Asp,13,2,Linkkaaja,link
+Cuddly Wombat,Cuddly Wombat,13,2,Linkkaaja,link
+Faded Falcon,Faded Falcon,7,1,PALTA,old
+Alluring Dragon,Alluring Dragon,6,1,Metsäteollisuus,old
+Tall Fish,Tall Fish,1,1,EK,old
+Six Marten,Six Marten,4,1,Kaupan liitto,old
+Orange Quelea,Orange Quelea,13,2,Linkkaaja,link
+Rebel Lynx,Rebel Lynx,3,1,Finanssiala,old
+Quack Damselfly,Quack Damselfly,6,1,Metsäteollisuus,old
+Stiff Cougar,Stiff Cougar,1,1,EK,old
+Quickest Snipe,Quickest Snipe,12,1,Teknologiateollisuus,old
+Boundless Albatross,Boundless Albatross,13,2,Linkkaaja,link
+Equable Gecko,Equable Gecko,3,1,Finanssiala,old
+Alleged Reindeer,Alleged Reindeer,9,1,Rakennusteollisuus,old
+Nimble Gibbon,Nimble Gibbon,7,1,PALTA,old
+Empty Owl,Empty Owl,12,1,Teknologiateollisuus,old
+Proud Condor,Proud Condor,7,1,PALTA,old
+Remarkable Trout,Remarkable Trout,4,1,Kaupan liitto,old
+Quarrelsome Swordfish,Quarrelsome Swordfish,7,1,PALTA,old
+Steadfast Chinchilla,Steadfast Chinchilla,13,3,Linkkaaja,link
+Abashed Cattle,Abashed Cattle,6,1,Metsäteollisuus,old
+Shrill Fish,Shrill Fish,13,2,Linkkaaja,link
+Bawdy Snail,Bawdy Snail,9,1,Rakennusteollisuus,old
+Gruesome Panther,Gruesome Panther,1,1,EK,old
+Workable Mallard,Workable Mallard,4,1,Kaupan liitto,old
+Unhealthy Aardwolf,Unhealthy Aardwolf,13,2,Linkkaaja,link
+Wise Cuckoo,Wise Cuckoo,6,1,Metsäteollisuus,old
+Third Deer,Third Deer,7,1,PALTA,old
+Vigorous Guan,Vigorous Guan,10,1,Suomen Yrittäjät,old
+Lewd Locust,Lewd Locust,7,1,PALTA,old
+Ill Zebu,Ill Zebu,13,2,Linkkaaja,link
+Amusing Rattlesnake,Amusing Rattlesnake,13,2,Linkkaaja,link
+Calculating Quetzal,Calculating Quetzal,7,1,PALTA,old
+Obscene Limpet,Obscene Limpet,6,1,Metsäteollisuus,old
+Joyous Landfowl,Joyous Landfowl,10,1,Suomen Yrittäjät,old
+Aggressive Bison,Aggressive Bison,8,1,Perheyritysten liitto,old
+Cautious Galliform,Cautious Galliform,13,2,Linkkaaja,link
+Even Egret,Even Egret,13,2,Linkkaaja,link
+Descriptive Bobcat,Descriptive Bobcat,12,1,Teknologiateollisuus,old
+Overrated Kite,Overrated Kite,8,1,Perheyritysten liitto,old
+Level Hippopotamus,Level Hippopotamus,13,2,Linkkaaja,link
+Tiresome Coypu,Tiresome Coypu,10,1,Suomen Yrittäjät,old
+Gray Dolphin,Gray Dolphin,10,1,Suomen Yrittäjät,old
+Gaudy Sawfish,Gaudy Sawfish,4,1,Kaupan liitto,old
+Nondescript Urial,Nondescript Urial,10,1,Suomen Yrittäjät,old
+Giddy Wolverine,Giddy Wolverine,6,1,Metsäteollisuus,old
+Jolly Stingray,Jolly Stingray,1,1,EK,old
+Callous Pike,Callous Pike,10,1,Suomen Yrittäjät,old
+Lamentable Harrier,Lamentable Harrier,1,1,EK,old
+Secret Turkey,Secret Turkey,10,1,Suomen Yrittäjät,old
+Acidic Pelican,Acidic Pelican,10,1,Suomen Yrittäjät,old
+Adamant Goldfish,Adamant Goldfish,9,1,Rakennusteollisuus,old
+Drunk Sole,Drunk Sole,12,1,Teknologiateollisuus,old
+Wacky Quokka,Wacky Quokka,10,1,Suomen Yrittäjät,old
+Crooked Tuna,Crooked Tuna,10,1,Suomen Yrittäjät,old
+Hot Loris,Hot Loris,7,1,PALTA,old
+Known Horse,Known Horse,6,1,Metsäteollisuus,old
+Shocking Primate,Shocking Primate,7,1,PALTA,old
+Melted Crab,Melted Crab,10,1,Suomen Yrittäjät,old
+Exciting Bobcat,Exciting Bobcat,10,1,Suomen Yrittäjät,old
+Broken Hummingbird,Broken Hummingbird,12,1,Teknologiateollisuus,old
+Filthy Snipe,Filthy Snipe,11,1,Suomen startup-yhteisö,new
+Quickest Monkey,Quickest Monkey,7,1,PALTA,old
+Tacit Hamster,Tacit Hamster,6,1,Metsäteollisuus,old
+Maddening Lark,Maddening Lark,13,3,Linkkaaja,link
+Holistic Cattle,Holistic Cattle,7,1,PALTA,old
+Used Silkworm,Used Silkworm,12,1,Teknologiateollisuus,old
+Maniacal Mule,Maniacal Mule,13,2,Linkkaaja,link
+Shivering Gamefowl,Shivering Gamefowl,6,1,Metsäteollisuus,old
+Probable Lapwing,Probable Lapwing,13,2,Linkkaaja,link
+Valuable Basilisk,Valuable Basilisk,13,3,Linkkaaja,link
+Ablaze Bovid,Ablaze Bovid,10,1,Suomen Yrittäjät,old
+Cautious Mite,Cautious Mite,10,1,Suomen Yrittäjät,old
+Lovely Mouse,Lovely Mouse,10,1,Suomen Yrittäjät,old
+Breezy Eagle,Breezy Eagle,12,1,Teknologiateollisuus,old
+Demonic Seahorse,Demonic Seahorse,13,2,Linkkaaja,link
+Tough Dodo,Tough Dodo,7,1,PALTA,old
+Fat Ladybug,Fat Ladybug,12,1,Teknologiateollisuus,old
+Various Echidna,Various Echidna,4,1,Kaupan liitto,old
+Mushy Lion,Mushy Lion,6,1,Metsäteollisuus,old
+Furtive Skink,Furtive Skink,7,1,PALTA,old
+Tearful Emu,Tearful Emu,10,1,Suomen Yrittäjät,old
+Deeply Warbler,Deeply Warbler,10,1,Suomen Yrittäjät,old
+Neat Vulture,Neat Vulture,4,1,Kaupan liitto,old
+Versed Gerbil,Versed Gerbil,9,1,Rakennusteollisuus,old
+Far Stoat,Far Stoat,13,2,Linkkaaja,link
+Temporary Mockingbird,Temporary Mockingbird,10,1,Suomen Yrittäjät,old
+Unused Koala,Unused Koala,12,1,Teknologiateollisuus,old
+Many Cuckoo,Many Cuckoo,10,1,Suomen Yrittäjät,old
+Bite-Sized Pheasant,Bite-Sized Pheasant,10,1,Suomen Yrittäjät,old
+Strange Cow,Strange Cow,10,1,Suomen Yrittäjät,old
+Invincible Ermine,Invincible Ermine,13,2,Linkkaaja,link
+Wild Chameleon,Wild Chameleon,5,1,Keskuskauppakamari,old
+Quack Termite,Quack Termite,9,1,Rakennusteollisuus,old
+Holistic Constrictor,Holistic Constrictor,7,1,PALTA,old
+Utopian Badger,Utopian Badger,13,2,Linkkaaja,link
+Descriptive Rabbit,Descriptive Rabbit,13,2,Linkkaaja,link
+Fluttering Mockingbird,Fluttering Mockingbird,10,1,Suomen Yrittäjät,old
+Temporary Mole,Temporary Mole,12,1,Teknologiateollisuus,old
+Humorous Dinosaur,Humorous Dinosaur,12,1,Teknologiateollisuus,old
+Round Basilisk,Round Basilisk,4,1,Kaupan liitto,old
+Mighty Elk,Mighty Elk,7,1,PALTA,old
+Sincere Boa,Sincere Boa,6,1,Metsäteollisuus,old
+Juicy Earwig,Juicy Earwig,13,3,Linkkaaja,link
+Instinctive Ermine,Instinctive Ermine,13,2,Linkkaaja,link
+Adorable Bull,Adorable Bull,10,1,Suomen Yrittäjät,old
+Terrific Reptile,Terrific Reptile,13,2,Linkkaaja,link
+Deserted Pelican,Deserted Pelican,13,2,Linkkaaja,link
+Moldy Bonobo,Moldy Bonobo,4,1,Kaupan liitto,old
+High Kiwi,High Kiwi,13,2,Linkkaaja,link
+Remarkable Parakeet,Remarkable Parakeet,13,2,Linkkaaja,link
+Soft Peafowl,Soft Peafowl,12,1,Teknologiateollisuus,old
+Laughable Gibbon,Laughable Gibbon,12,1,Teknologiateollisuus,old
+Picayune Bovid,Picayune Bovid,10,1,Suomen Yrittäjät,old
+Gleaming Gopher,Gleaming Gopher,13,2,Linkkaaja,link
+Talented Starfish,Talented Starfish,13,2,Linkkaaja,link
+Light Swallow,Light Swallow,3,1,Finanssiala,old
+Bewildered Basilisk,Bewildered Basilisk,13,2,Linkkaaja,link
+Married Heron,Married Heron,13,2,Linkkaaja,link
+Synonymous Turkey,Synonymous Turkey,4,1,Kaupan liitto,old
+Quarrelsome Lungfish,Quarrelsome Lungfish,13,2,Linkkaaja,link
+Magenta Parrot,Magenta Parrot,10,1,Suomen Yrittäjät,old
+Unruly Swift,Unruly Swift,9,1,Rakennusteollisuus,old
+Abaft Chipmunk,Abaft Chipmunk,6,1,Metsäteollisuus,old
+Natural Alpaca,Natural Alpaca,12,1,Teknologiateollisuus,old
+Repulsive Sloth,Repulsive Sloth,10,1,Suomen Yrittäjät,old
+Overconfident Bull,Overconfident Bull,13,2,Linkkaaja,link
+Fanatical Carp,Fanatical Carp,13,2,Linkkaaja,link
+Three Magpie,Three Magpie,4,1,Kaupan liitto,old
+Average Mongoose,Average Mongoose,6,1,Metsäteollisuus,old
+Rustic Mule,Rustic Mule,1,1,EK,old
+Scared Parrot,Scared Parrot,13,2,Linkkaaja,link
+Concerned Mastodon,Concerned Mastodon,9,1,Rakennusteollisuus,old
+Huge Wildcat,Huge Wildcat,12,1,Teknologiateollisuus,old
+Grieving Hedgehog,Grieving Hedgehog,10,1,Suomen Yrittäjät,old
+Dynamic Numbat,Dynamic Numbat,10,1,Suomen Yrittäjät,old
+Terrific Hyena,Terrific Hyena,6,1,Metsäteollisuus,old
+Fretful Tick,Fretful Tick,4,1,Kaupan liitto,old
+Dull Cardinal,Dull Cardinal,13,2,Linkkaaja,link
+Striped Camel,Striped Camel,4,1,Kaupan liitto,old
+Right Amphibian,Right Amphibian,9,1,Rakennusteollisuus,old
+Maddening Anglerfish,Maddening Anglerfish,7,1,PALTA,old
+Lowly Mammal,Lowly Mammal,10,1,Suomen Yrittäjät,old
+Silent Otter,Silent Otter,10,1,Suomen Yrittäjät,old
+Sudden Pelican,Sudden Pelican,2,1,EVA/Etla,old
+Obtainable Ibex,Obtainable Ibex,7,1,PALTA,old
+Breeze Warbler,Breeze Warbler,4,1,Kaupan liitto,old
+Flagrant Heron,Flagrant Heron,10,1,Suomen Yrittäjät,old
+Bustling Panther,Bustling Panther,7,1,PALTA,old
+Miscreant Chipmunk,Miscreant Chipmunk,7,1,PALTA,old
+Harsh Pig,Harsh Pig,10,1,Suomen Yrittäjät,old
+Ancient Hare,Ancient Hare,13,2,Linkkaaja,link
+Successful Roundworm,Successful Roundworm,13,4,Linkkaaja,link
+Pleasant Bobolink,Pleasant Bobolink,7,1,PALTA,old
+Protective Tapir,Protective Tapir,7,1,PALTA,old
+Jagged Antlion,Jagged Antlion,8,1,Perheyritysten liitto,old
+Lying Grebe,Lying Grebe,13,2,Linkkaaja,link
+Fortunate Loon,Fortunate Loon,7,1,PALTA,old
+Daffy Wolverine,Daffy Wolverine,12,1,Teknologiateollisuus,old
+Male Tuna,Male Tuna,12,1,Teknologiateollisuus,old
+Wrong Viper,Wrong Viper,6,1,Metsäteollisuus,old
+Earthy Bear,Earthy Bear,13,2,Linkkaaja,link
+Incandescent Snipe,Incandescent Snipe,13,2,Linkkaaja,link
+Scarce Condor,Scarce Condor,9,1,Rakennusteollisuus,old
+Rampant Lungfish,Rampant Lungfish,1,1,EK,old
+Hysterical Crocodile,Hysterical Crocodile,10,1,Suomen Yrittäjät,old
+Ratty Orca,Ratty Orca,13,2,Linkkaaja,link
+Rainy Wolverine,Rainy Wolverine,13,2,Linkkaaja,link
+Milky Leopon,Milky Leopon,3,1,Finanssiala,old
+Addicted Ibex,Addicted Ibex,7,1,PALTA,old
+Responsible Swallow,Responsible Swallow,8,1,Perheyritysten liitto,old
+Economic Loon,Economic Loon,5,1,Keskuskauppakamari,old
+Past Albatross,Past Albatross,9,1,Rakennusteollisuus,old
+Versed Pigeon,Versed Pigeon,12,1,Teknologiateollisuus,old
+Aloof Mockingbird,Aloof Mockingbird,1,1,EK,old
+Deserted Cricket,Deserted Cricket,10,1,Suomen Yrittäjät,old
+Stormy Jellyfish,Stormy Jellyfish,12,1,Teknologiateollisuus,old
