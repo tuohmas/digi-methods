@@ -5,45 +5,80 @@
 # Clean the environment
 rm(list = ls())
 
+# Suppress scientific notation
+options(scipen = 999)
+
 # Load packages
-pacman::p_load(tidyverse,
-               igraph,
-               tidygraph,
-               RColorBrewer)
+pacman::p_load(tidyverse,     # For data manipulation
+               igraph,        # For network analysis
+               RColorBrewer) # For additional color palettes
 
-# Create random graphs for demonstration purposes
-# Each graph has 25 vertices (nodes) randomly connected via 42 edges (ties)
-g1 <- igraph::erdos.renyi.game(25, 42, type = "gnm")
-g2 <- igraph::erdos.renyi.game(25, 42, type = "gnm")
-g3 <- igraph::erdos.renyi.game(25, 42, type = "gnm")
-g4 <- igraph::erdos.renyi.game(25, 42, type = "gnm")
-g5 <- igraph::erdos.renyi.game(25, 42, type = "gnm")
-g6 <- igraph::erdos.renyi.game(25, 42, type = "gnm")
-g7 <- igraph::erdos.renyi.game(25, 42, type = "gnm")
-g8 <- igraph::erdos.renyi.game(25, 42, type = "gnm")
-g9 <- igraph::erdos.renyi.game(25, 42, type = "gnm")
+# load nodes and edges
+nodes <- read_csv("data/interest-groups-pseudo-nodes.csv")
+edges <- read_csv("data/interest-groups-pseudo-edges.csv")
 
-# Lets select one graph object at a time
-g <- g3
+# create a graph object from a data frame
+g <- igraph::graph_from_data_frame(edges, directed = FALSE, vertices = nodes)
 
-# Calculate degrees per node; store the value as vertex attribute
-V(g)$degree <- degree(g, mode = "all")
+# Show graph object
+g
 
-# Color graph; edges are black except for one random edge (index 1)
-E(g)$color <- "black"
-E(g)[1]$color <- RColorBrewer::brewer.pal(8, "PuBu")[6]
+# global properties: node and edge counts, density
+g_global <-
+  data.frame(
+    nodes               = vcount(g),
+    edges               = ecount(g),
+    density             = edge_density(g),
+    avg_degree          = mean(degree(g, mode = "total")),
+    avg_clustering_coef = transitivity(g, type = "average"),
+    components          = count_components(g),
+    nodes_in_giant_comp = vcount(largest_component(g)),
+    diameter            = diameter(g),
+    avg_path_length     = mean_distance(g, directed = FALSE,
+                                        weights = E(g)$weight))
 
-# Get nodes (vertex ids) connected via the selected edge
-vids <- ends(g, 1) %>% as.numeric()
+glimpse(g_global)
 
-# Color nodes white except for special pair of nodes
-V(g)$color <- "white"
-V(g)[vids]$color <- RColorBrewer::brewer.pal(8, "PuBu")[4]
+# calculate degree for vertices (nodes), add as an vertex attribute
+V(g)$degree <- degree(g, mode = "total")
 
-# Size nodes by their degree number, min 2
-V(g)$size <- 2 + V(g)$degree
+# Plot degree distribution as an histogram
+hist(degree.distribution(g))
+
+hist(table(V(g)$degree), breaks = length(unique(V(g)$degree)),
+     main = "degree distributions", xlab = "Degree number")
+
+hist(table(V(g)$degree), breaks = "Freedman-Diaconis",
+     main = "degree distributions", xlab = "Degree number")
+
+# Calculate other local properties
+V(g)$eigenvector <- eigen_centrality(g, directed = FALSE)$vector
+V(g)$pagerank <- page_rank(g, directed = FALSE)$vector
+V(g)$betweenness <- betweenness(g, directed = FALSE, normalized = TRUE)
+V(g)$core_number <- coreness(g)
+
+# Make a dataframe to compare local properties
+g_local <-
+  data.frame(node = V(g)$name,
+             degree = V(g)$degree,
+             betweenness = V(g)$betweenness,
+             eigenvector_centr = V(g)$eigenvector,
+             pagerank = V(g)$pagerank,
+             k_core = V(g)$core_number)
+
+g_local %>% arrange(desc(degree)) %>% head(10)
+g_local %>% arrange(desc(degree)) %>% tail(10)
+
+g_local %>% arrange(desc(eigenvector_centr)) %>% head(10)
+g_local %>% arrange(desc(eigenvector_centr)) %>% tail(10)
 
 # Plot graph
-plot(g, layout = layout_with_kk,
-     # Plot network without labels; specially thick edge for special nodes
-     vertex.label = NA, edge.width = ifelse(E(g) == 1, 6, 1))
+plot(vertex.color = "light blue", vertex.size = 4,
+     edge.color = "grey90", vertex.label = NA,
+     edge.width = E(g)$weight)
+
+# Plot with force-directed algorithm
+plot(g, vertex.color = "light blue", vertex.size = 4,
+     layout = layout_with_fr(g, niter = 1000),
+     edge.color = "grey90", vertex.label = NA,
+     edge.width = E(g)$weight)
