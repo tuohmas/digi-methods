@@ -1,74 +1,219 @@
 # Tuomas Heikkilä
 # 2023-01-30
 #
-# Script for calculating edit distances between dog names and human names
+# Introduction to basics of character and text wrangling using the case study
+# of dog names and human names
 #
 ### PREPARATIONS ###############################################################
 
-# Clean the environment
+# Clean the environment:
+# Removes all variables from the memory
+
 rm(list = ls())
 
-# Load packages
-packages( "dplyr", "tidyr", "stringdist")
+# Set additional options, e.g., suppress scientific notation (9.9E-1 -> 0.99)
+options(scipen = 999)
 
-# Alternatively, p_load function from pacman library allows installs all missing
-# packages (including pacman) and loads them
-pacman::p_load(dplyr,
-               tidyr,
-               stringdist)
+# Load packages dplyr, tidyr and stringdist to the memory
+packages("dplyr", "tidyr", "stringdist")
+
+# Alternatively, use p_load function from pacman package to install all missing
+# packages (including pacman itself) and load them
+
+pacman::p_load(dplyr,       # Used to manipulate data frames
+               tidyr,       # Used to manipulate data frames
+               stringdist)  # Used to compute distances between characters
 
 ### BASIC FUNCTIONS ON VECTORS #################################################
 
 # Lets assign dog names into a "names" variable
-names <- c("Simo","Milo","Murre","Laila")
+names <- c("Simo", "Milo", "Murre", "Laila")
 
-# Names is a character vector:
-typeof(names)
-is.vector(names)
+# Remember to close parenthesis and quotation marks, and follow commas with
+# new values/parameters. Compared to many other languages R is very forgiving,
+# but not without its own syntax errors.
 
-# Names has the length of 4 elements:
+# We can check that "names" is a character vector:
+typeof(names)      # "typeof" should return "character"
+class(names)       # Here, "class" function gives the same result
+
+# We might also want a "Yes/No" answer (called boolean or logical):
+is.vector(names)   # Should return TRUE
+is.numeric(names)  # Whereas "names" is not numeric (FALSE)
+
+# Names has a length of 4 elements:
 length(names)
 
 # Second element (value in the second index) of the vector is "Milo":
 names[2]
 
-# Last element is "Laila":
-names[length(names)]
+# Firs to third elements are "Simo", "Milo" and "Murre"
+names[1:3] # Print the range of element from 1 to 3
+names[-4]  # Is same as excluding the 4th element
+
+# Last element of any vector can be called indirectly with the "length" vector:
+names[length(names)]   # Same as name[4],
+names[length(names)-1] # Similarly, calling second to last element and so fort
 
 # Which element is "Simo"?
 which(names == "Simo")
 
-# To call for the length of the names in the vector, we would use nchar:
-nchar(names)
+# To call for the length of the values (dog names), we would use "nchar"
+nchar(names)   # Number of characters of every dog name in our list
 
-# To sort names alphabetically, we would use sort:
+# To sort names alphabetically, we would use "sort":
 sort(names)
+
+# Or, in the reverse (alphabetical) order by using "rev" with "sort":
+rev(sort(names))
 
 # See how, if we do not assign sorted vector anywhere (names <- sort(names)),
 # calling names again will revert to its original order:
 print(names)
 
-# Coercing names to numeric type results to a bunch of NA values (missing):
-as.numeric(names)
+names <- sort(names)  # Instead, we need to update the vector
 
-# Whereas coercing names into a dataframe object gives a legitimate dataframe:
+# Usually, we start of by multiple vectors from different data sources and want
+# to expand one vector with new values or join two vectors together.
+
+# "append" function that takes two parameters: a) the original
+# vector (to which we want to append values) and b) the value(s) to add
+
+names <- c("Simo", "Milo", "Murre")
+names <- append(names, "Laila")      # We have just updated the name var
+
+# Variables might also have same values between them, for example "Murre"
+names <- c("Simo", "Milo", "Murre")
+more_names <- c("Laila", "Murre", "Kamu")
+
+intersect(names, more_names)   # Calling "intersect" returns the common "Murre"
+union(names, more_names)       # "union" gives unique values from both
+setdiff(names, more_names)     # Hox! "setdiff" gives only values that appear on
+                               # "names", but not more_names
+
+# To get unique values from a vector that already has duplicate values:
+names <- append(names, more_names)   # "Murre" appears twice
+unique(names)               # All elements are unique
+
+# Alternatively, calling "duplicated" function on a vector checks whether the
+# element is repeated further into the vector and returns TRUE for the element
+# that is repeated
+duplicated(names)
+which(duplicated(names))    # "Which" returns the position repeated element (5)
+
+names[duplicated(names)]    # Return the duplicate(s) elements by indexing
+names[!duplicated(names)]   # Expression "!duplicated" ("is not duplicate")
+                            # returns the vector with duplicated excluded
+
+# Sometimes we might want to turn ("coerce") the variable into a to numeric type
+# ("1" to 1, or "0.5" to 0.5). However, R does not know how to make number from
+# words like "Laila", and defaults into a bunch of missing values (NA):
+
+numeric_names <- as.numeric(names)
+is.na(numeric_names)                # Checking that numeric_names are missing
+
+any(is.na(numeric_names))  # using "any" function tells us whether there vector
+                           # has any element corresponding an expression (is.na)
+
+all(is.na(numeric_names))  # "all" function is similar, but instead of using OR
+                           # operators, is uses AND (all elements have match the
+                           # the expression "is missing")
+
+# Coercing names into a data frame object gives a legitimate data frame:
 as.data.frame(names)
 
+### DATA FRAMES ################################################################
+
 # Now we could build up the data frame by adding new information, like ages
-df_dogs <- data.frame(names = names, # Column name, column values
-                      ages  = c(2022, 2021, 2018, NA))
+df_dogs <-
+  data.frame(names = names,                    # Column name = column values
+             born  = c(2022, 2021, 2018, NA))  # Column name = column values
+
+# Glimpse or View the data frame we have created:
+glimpse(df_dogs)
+str(df_dogs)
+View(df_dogs)
 
 # Alternatively, lets use mutate method that allows to edit and add columns
 df_dogs <- as.data.frame(names)
 
 # The pipe (%>%) takes what is before it and applies that to the function after
-df_dogs <- df_dogs %>% mutate(ages = c(2022, 2021, 2018, NA))
+df_dogs <- df_dogs %>% mutate(born = c(2022, 2021, 2018, NA))
 
 # Is the same as:
-df_dogs <- mutate(df_dogs, ages = c(2022, 2021, 2018, NA))
+df_dogs <- mutate(df_dogs, born = c(2022, 2021, 2018, NA))
 
-# Glimpse df_dogs:
-glimpse(df_dogs)
+# More ways to add new columns:
+birth_place <- c("Lohja", "Kirkkonummi", "Ähtäri", "Posio")
+
+df_dogs$birth_place <- birth_place     # Just invent new column after df$...
+cbind(df_dogs, birth_place) # Bind columns row by row
+
+# Adding new cases (as named vectors ~ dictionaries if needed):
+new_dog <- c("names" = "Kamu", "born" = 2013, "birth_place" = "Keuruu")
+
+# In base R, adding new cases is a struggle: use "rbind" or "bind_rows" instead
+df_dogs[nrow(df_dogs) + 1,] <- new_dog    # Row after the last row
+df_dogs <- rbind(df_dogs, new_dog)        # Order of the columns is important
+df_dogs <- bind_rows(df_dogs, new_dog)    # Order or the column does not matter
+
+# Drop duplicate values with "unique" or "duplicated"
+df_dogs <- unique(df_dogs)
+df_dogs <- df_dogs[!duplicated(df_dogs),]
+
+# Call the row or column names of data frame:
+colnames(df_dogs)
+rownames(df_dogs)
+
+# Assign new names
+colnames(df_dogs) <- c("name", "born", "origin") # Make sure to have a
+                                                 # replacement for every col
+rownames(df_dogs) <- tolower(df_dogs$name)       # Dog names, but in lower case
+
+# To call variables (columns) we use df$column or df["row", "column"]:
+df_dogs$born
+df_dogs[,"born"]   # We will leave rows empty to get all of them
+
+# At some point, "born" has been stringified: coerce back to numeric
+df_dogs$born <- as.numeric(df_dogs$born)
+
+# To get specific values, we need to specify the row as well:
+df_dogs[1, "name"]
+df_dogs["simo", "name"]  # Since we added dog names as row names
+df_dogs$name[1]
+
+# To search for a specific value, logical operators like "==" and "!=" are used:
+df_dogs[df_dogs$name == "Laila",]       # Get all information on "Laila"
+df_dogs[df_dogs$name != "Simo", "born"] # Get all ages except for Simo's
+
+# Drop rows with missing values
+df_dogs[!is.na(df_dogs$born),]     # Get rows where ages is not missing
+df_dogs[complete.cases(df_dogs),] # Get rows where there are no missing values
+na.omit(df_dogs)                  # Similar to "complete.cases"
+
+# Filtering (subsetting) cases is easiest using "filter" from dplyr pkg:
+df_dogs %>% filter(born > 2020) # Born after 2020
+df_dogs %>% filter(between(born, 2018, 2022)) # Born between 2010 and 2020
+df_dogs %>% filter(startsWith(origin, "K")) # Born between 2010 and 2020
+df_dogs %>% filter(when(character)) # Born between 2010 and 2020
+
+# Selecting columns based on conditions
+df_dogs %>% select(origin)             # Select any column by its name
+df_dogs %>% select(1:2)                # First two columns by their index
+df_dogs %>% select(-1)                 # Exclude first column
+df_dogs %>% select(where(is.numeric))  # Select only numeric columns
+df_dogs %>% select(starts_with("b"))   # Select columns starting with a letter
+
+keep_cols <- c("name", "born")
+df_dogs %>% select(all_of(keep_cols))  # Keep all columns identified by a vector
+
+# Selected columns are still if of the type data frame: "pull" to coerce vectors
+df_dogs %>% select(origin) %>% pull()
+df_dogs %>% pull(origin)
+
+### JOIN DATA FRAMES ###########################################################
+
+"TBA"
 
 ### CALCULATE EDIT DISTANCES ###################################################
 
