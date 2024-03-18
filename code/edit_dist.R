@@ -47,24 +47,28 @@ length(names)
 # Second element (value in the second index) of the vector is "Milo":
 names[2]
 
-# Firs to third elements are "Simo", "Milo" and "Murre"
+# First to third elements are "Simo", "Milo" and "Murre"
 names[1:3] # Print the range of element from 1 to 3
 names[-4]  # Is same as excluding the 4th element
 
-# Last element of any vector can be called indirectly with the "length" vector:
-names[length(names)]   # Same as name[4],
+# Last element of any vector can be called indirectly by calling its length:
+names[length(names)]   # Here, same as name[4] (length(names): 4))
 names[length(names)-1] # Similarly, calling second to last element and so fort
 
 # Which element is "Simo"?
 which(names == "Simo")
 
-# To call for the length of the values (dog names), we would use "nchar"
-nchar(names)   # Number of characters of every dog name in our list
+# Check names for a name we are looking for:
+"Lulu" %in% names                             # No match this time (FALSE)
+c("Lulu", "Murre") %in% names                 # One miss, but also one match
+
+# To call for the length of all the values (dog names), we would use "nchar"
+nchar(names)
 
 # To sort names alphabetically, we would use "sort":
 sort(names)
 
-# Or, in the reverse (alphabetical) order by using "rev" with "sort":
+# Or, in the reverse (alphabetical) order by combining with "rev":
 rev(sort(names))
 
 # See how, if we do not assign sorted vector anywhere (names <- sort(names)),
@@ -86,24 +90,25 @@ names <- append(names, "Laila")      # We have just updated the name var
 names <- c("Simo", "Milo", "Murre")
 more_names <- c("Laila", "Murre", "Kamu")
 
-intersect(names, more_names)   # Calling "intersect" returns the common "Murre"
+intersect(names, more_names)   # Calling "intersect" returns the shared value(s)
 union(names, more_names)       # "union" gives unique values from both
-setdiff(names, more_names)     # Hox! "setdiff" gives only values that appear on
-                               # "names", but not more_names
+setdiff(names, more_names)     # Hox! "setdiff" returns alle the values that
+                               # appear on "names", but not in "more_names"
 
 # To get unique values from a vector that already has duplicate values:
 names <- append(names, more_names)   # "Murre" appears twice
-unique(names)               # All elements are unique
+unique(names)                        # These elements are unique to "names"
 
 # Alternatively, calling "duplicated" function on a vector checks whether the
 # element is repeated further into the vector and returns TRUE for the element
 # that is repeated
-duplicated(names)
-which(duplicated(names))    # "Which" returns the position repeated element (5)
 
-names[duplicated(names)]    # Return the duplicate(s) elements by indexing
+duplicated(names)           # either FALSE (unique), TRUE (repeated)
+which(duplicated(names))    # "which" returns the position of repeated element
+
+names[duplicated(names)]    # Return the duplicate(s) by indexing
 names[!duplicated(names)]   # Expression "!duplicated" ("is not duplicate")
-                            # returns the vector with duplicated excluded
+                            # returns the vector without duplicated values
 
 # Sometimes we might want to turn ("coerce") the variable into a to numeric type
 # ("1" to 1, or "0.5" to 0.5). However, R does not know how to make number from
@@ -135,19 +140,23 @@ str(df_dogs)
 View(df_dogs)
 
 # Alternatively, lets use mutate method that allows to edit and add columns
-df_dogs <- as.data.frame(names)
+df_dogs <- as.data.frame(names)   # First, coerce names into a data frame
 
-# The pipe (%>%) takes what is before it and applies that to the function after
-df_dogs <- df_dogs %>% mutate(born = c(2022, 2021, 2018, NA))
-
-# Is the same as:
+# Now let's add another column by
 df_dogs <- mutate(df_dogs, born = c(2022, 2021, 2018, NA))
 
-# More ways to add new columns:
-birth_place <- c("Lohja", "Kirkkonummi", "Ähtäri", "Posio")
+# In dplyr it is custom to manipulate data frames using a pipe (%>%).
+# The pipe takes what is before it and applies that to the proceeding function.
+# This reduced nested parantheses and constantly repeating the variable.
 
-df_dogs$birth_place <- birth_place     # Just invent new column after df$...
-cbind(df_dogs, birth_place) # Bind columns row by row
+df_dogs <- df_dogs %>%
+  mutate(born = c(2022, 2021, 2018, NA)) # mutate is still performed on df_dogs
+
+# More ways to add new columns:
+birth_place <- c("Lohja", "Kirkkonummi", "Ähtäri", "Posio")  # Define a new var
+
+df_dogs$birth_place <- birth_place     # Create a new column using $[col name]
+cbind(df_dogs, birth_place)            # Or bind column to existing data frame
 
 # Adding new cases (as named vectors ~ dictionaries if needed):
 new_dog <- c("names" = "Kamu", "born" = 2013, "birth_place" = "Keuruu")
@@ -158,7 +167,7 @@ df_dogs <- rbind(df_dogs, new_dog)        # Order of the columns is important
 df_dogs <- bind_rows(df_dogs, new_dog)    # Order or the column does not matter
 
 # Drop duplicate values with "unique" or "duplicated"
-df_dogs <- unique(df_dogs)
+df_dogs <- df_dogs %>% unique()
 df_dogs <- df_dogs[!duplicated(df_dogs),]
 
 # Call the row or column names of data frame:
@@ -176,6 +185,7 @@ df_dogs[,"born"]   # We will leave rows empty to get all of them
 
 # At some point, "born" has been stringified: coerce back to numeric
 df_dogs$born <- as.numeric(df_dogs$born)
+df_dogs <- df_dogs %>% mutate(born = as.numeric(born)) # Same thing with dplyr
 
 # To get specific values, we need to specify the row as well:
 df_dogs[1, "name"]
@@ -209,7 +219,6 @@ df_dogs %>% select(all_of(keep_cols))  # Keep all columns identified by a vector
 
 # Selected columns are still if of the type data frame: "pull" to coerce vectors
 df_dogs %>% select(origin) %>% pull()
-df_dogs %>% pull(origin)
 
 ### JOIN DATA FRAMES ###########################################################
 
