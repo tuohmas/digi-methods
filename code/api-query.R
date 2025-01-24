@@ -22,14 +22,264 @@ pacman::p_load(dplyr,
                purrr,
                WikipediR)
 
-# Additionally, it may be advisable to install the latest version of 'polite'
-# straight from Github repository
-
-install.packages("remotes")
-remotes::install_github("dmi3kno/polite")
-library(polite)
-
 sessioninfo::session_info()
+
+# QUERYING THE SEMANTIC SCHOLAR API ###
+
+# API Documentation
+
+# Be polite: wrap request function inside politely
+politely_req <- politely(httr2::request, verbose = TRUE)
+
+# Request Semantic Scholar's Academic Graph API
+req <- politely_req("https://api.semanticscholar.org/graph/v1")
+
+# From API documentation
+# Rate limits: 10 request per second for paper/citations and paper/references
+
+# Define a function for looking up citations and reference from S2 Open Research
+# Corpus.
+get_citations <- function(
+
+  ids,                                            # Identifiers: DOI or S2 IDs
+  k = 0,                                          # For indexing iterations
+  output = vector(mode = "list", length = 1e6),   # Output list
+  params = list(fields = c("paperId", "title")),  # Minimum field parameters
+  include_refs = FALSE                            # Option for looking up refs
+
+) {
+
+  for (i in seq_along(ids)) {
+
+    # Show progress
+    message(paste0("\nRequesting ", i, " / ", length(ids), "...\n"))
+
+    # Add to the index
+    k <- k + 1
+
+    # Build query
+    query <- req %>%
+      # req_headers(`x-api-key` = Sys.getenv("S2_KEY")) %>%   # Pass secret to header
+      req_progress() %>%                   # Monitor progress
+      req_throttle(rate = 1 / 5) %>%       # Limit requests to 1 per 5 seconds
+      req_retry(max_tries = 4, backoff = ~30) %>%
+      req_url_path_append("paper", paste0("DOI:", ids[i])) %>%
+      req_url_query(!!!params, .multi = "comma")
+
+    # Try query out
+    query %>% req_dry_run()
+
+    # Perform the request
+    resp <- query %>%
+      req_perform()
+
+    # Error handling
+    if (resp_content_type(resp) != "application/json" |
+        resp_status(resp) != 200) { next }
+
+    # json <- resp %>% httr2::resp_body_json(simplifyVector = TRUE)
+    json <- resp %>% httr2::resp_body_json(simplify = TRUE)
+
+    # Extract ids for citations/refereces
+    citation_ids <-
+      json$citations$paperId[!is.na(json$citations$paperId)]
+    references_ids <-
+      json$references$paperId[!is.na(json$references$paperId)]
+
+    # Unnest DOI and BibTex, discard unused values
+    json$doi <- json$externalIds$DOI
+    json$externalIds <- NULL
+
+    json$citation <- json$citationStyles[[1]]
+    json$citationStyles <- NULL
+
+    json$citations <- NULL
+    json$references <- NULL
+
+    paper_details <- json %>%
+      modify_if(is.null, function(x) NA) %>% # Convert NULL to NA value
+      as_tibble() %>%
+      mutate(type = "seed", .before = everything())
+
+    output[[k]] <- paper_details
+
+    ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###
+
+    # Iterate over CITATIONS with pagination:
+    # API will only return 500 batch paper details per request
+
+    # Error handling: when no citations, skip to next
+    if(length(citation_ids) > 0) {
+
+      chunks <- split(citation_ids, ceiling(length(citation_ids)/500))
+
+    } else { next }
+
+    for (j in seq_along(chunks)) {
+
+      # Add to the index
+      k <- k + 1
+
+      query <- req %>%
+        req_progress() %>%                   # Monitor progress
+        req_throttle(rate = 1 / 5) %>%       # Limit requests to 1 per 5 seconds
+        req_retry(max_tries = 4, backoff = ~30) %>%
+        req_url_query(!!!params, .multi = "comma")
+
+      # Error handling: if more than one, use batch
+
+      if(length(citation_ids) > 1) {
+
+        query <- query %>%
+          req_method("POST") %>%
+          req_url_path_append("paper", "batch") %>% # Pass JSON using POST method
+          req_body_json(list(ids = chunks[[j]]))
+
+      } else {
+
+        query <- query %>%
+          req_url_path_append("paper", citation_ids)
+
+      }
+
+      # Try query out
+      query %>% req_dry_run()
+
+      # Perform the request
+      resp <- query %>%
+        req_perform()
+
+      # Error handling
+      if (resp_content_type(resp) != "application/json" |
+          resp_status(resp) != 200) { break }
+
+      json <- resp %>% httr2::resp_body_json(simplifyVector = TRUE)
+
+      json$doi <- json$externalIds$DOI
+      json$externalIds <- NULL
+
+      json$citation <- json$citationStyles[[1]]
+      json$citationStyles <- NULL
+
+      json$citations <- NULL
+      json$references <- NULL
+
+      citations_details <- json %>%
+        modify_if(is.null, function(x) NA) %>% # Convert NULL to NA value
+        as_tibble() %>%
+        mutate(type = "citation",
+               citing_paper = paperId,
+               cited_paper = paper_details$paperId, .before = everything())
+
+      # Append results to output
+      output[[k]] <- citations_details }
+
+    ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###
+
+    if(!include_refs) { next
+
+    } else {
+
+      # Iterate over REFERENCES with pagination:
+      # API will only return 500 batch paper details per request
+
+      # Error handling: when no citations, skip to next
+      if(length(references_ids) > 0) {
+
+        chunks <- split(references_ids, ceiling(length(references_ids)/500))
+
+      } else { next }
+
+      for (j in seq_along(chunks)) {
+
+        # Add to the index
+        k <- k + 1
+
+        query <- req %>%
+          req_progress() %>%                   # Monitor progress
+          req_throttle(rate = 1 / 5) %>%       # Limit requests to 1 per 5 seconds
+          req_retry(max_tries = 4, backoff = ~30) %>%
+
+
+          req_url_query(!!!params, .multi = "comma")
+
+        # Error handling: if more than one, use batch
+
+        if(length(references_ids) > 1) {
+
+          query <- query %>%
+            req_method("POST") %>%
+            req_url_path_append("paper", "batch") %>% # Pass JSON using POST method
+            req_body_json(list(ids = chunks[[j]]))
+
+        } else {
+
+          query <- query %>%
+            req_url_path_append("paper", references_ids) }
+
+        # Try query out
+        query %>% req_dry_run()
+
+        # Perform the request
+        resp <- query %>%
+          req_perform()
+
+        # Error handling
+        if (resp_content_type(resp) != "application/json" |
+            resp_status(resp) != 200) { break }
+
+        json <- resp %>% httr2::resp_body_json(simplifyVector = TRUE)
+
+        json$doi <- json$externalIds$DOI
+        json$externalIds <- NULL
+
+        json$citation <- json$citationStyles[[1]]
+        json$citationStyles <- NULL
+
+        json$citations <- NULL
+        json$references <- NULL
+
+        references_details <- json %>%
+          modify_if(is.null, function(x) NA) %>% # Convert NULL to NA value
+          as_tibble() %>%
+          mutate(type = "reference",
+                 citing_paper = paper_details$paperId,
+                 cited_paper = paperId, .before = everything())
+
+        # Append results to output
+        output[[k]] <- references_details } # End iterate over chunks
+
+    } # End of if include_refs
+
+  } # End iterate over papers
+
+  # Return compact output
+  return(compact(output))
+
+}
+
+# Set field parameters,
+params <-
+  list(fields = c("paperId",  "corpusId", "title", "abstract", "venue",
+                  "citationCount", "publicationDate", "externalIds",
+                  "citationStyles", "citations", "references"))
+
+# Seed DOIs
+ids = c("10.1080/13183222.2018.1463047") # Farkas and Schou, 2018 (Javnost)
+
+
+grepl(pattern = "^10\\.\\d{4,9}\\/[-._;()/:A-Z0-9]+", ids)
+grepl(pattern = r"[/^10.1002/[^\s]+$/i]", ids[1])
+
+# First iteration
+first_citations <- get_citations(ids = ids, params = params,
+                                 include_refs = TRUE)
+
+first_citations
+
+df_studies <- do.call("bind_rows", first_citations) %>%
+  filter(publicationDate < "2024-10-01") %>%    # Include up until October 2024
+  arrange(desc(publicationDate))
 
 # STORE SECRETS FOR API AUTHENTICATION #########################################
 
@@ -41,10 +291,9 @@ sessioninfo::session_info()
 # Once created, store Client ID, Client secret and Access tokens as Environment
 # Variables
 
-# Sys.setenv(wikimedia_client_id = "c6a6ceb10ba86f818082c7789bc408ca") # Uncomment and replace with your key
-# Sys.setenv(wikimedia_secret = "3272dc5215d4b9a6779ac75ef23f25e96a30a57a") # Uncomment and replace with your key
-# Sys.setenv(wikimedia_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJjNmE2Y2ViMTBiYTg2ZjgxODA4MmM3Nzg5YmM0MDhjYSIsImp0aSI6IjY3ZWQzN2E3MmY3NDg2MDY5ZTk0YTQwODM4ODFhMzE4NDZlYTVmYjg5NmY2MDQ4MGZiZWQxMmQyYjQ5NThlODM3MWYzZTUwZjI1YTYzZWEyIiwiaWF0IjoxNzM3NjIwMDE1LjkxMDE4NSwibmJmIjoxNzM3NjIwMDE1LjkxMDE4OCwiZXhwIjozMzI5NDUyODgxNS45MDg4MTMsInN1YiI6Ijc3NDYyNTAxIiwiaXNzIjoiaHR0cHM6Ly9tZXRhLndpa2ltZWRpYS5vcmciLCJyYXRlbGltaXQiOnsicmVxdWVzdHNfcGVyX3VuaXQiOjUwMDAsInVuaXQiOiJIT1VSIn0sInNjb3BlcyI6WyJiYXNpYyJdfQ.Kj2bvFKhw2duwIOt6QymRuTgd-OSsKSiPdtS7Z72zU18JOiUHsGpNk-RKcu7DEfSMrwYcCYmlGGkWIM9Qvbws6DjXu70QWxrBAPIk_VSuMgjzY6r4h06gT9hXSPHKiYy-5P0-ccMjLDdMpWzg-n5_PhCPl7dKhxE_YTqLkPXSpUuHwzkRw2bnZ3StHjxcmTRC-55qmkxCD2p7YRIFFb8x33tm3nNI0ie5VRP_FA8DEuHEKgsgYcN0_wwVXjiOJSTasaX8VoNdQGrd2Wt9GFTRwsGbbq1Tc1p4dELxPQRlGu66fVc4tQFG_u2xQ78ox3YnpLCJAHx7e--OQhYN3XsSYkCmz82rBOrF7EmaP4j3ETYPT70QgeZti4bXzW19-mRCgxkf5awPur8bhzAsRt1OF3ZKweRY5Q2DdKR-IFu60rOMT81DjGHsiIygeW_lU9WxKvv7UhY8M2jGPStbqV0VFLYP3rbB2x741bSPI2XuV5JNB_6SiWUfElTjAPKr6_00YFrxiqUheGyPevLsV-oqKcJmZ15hPPj5A98ddJcI2BCCIbPseZZ4LB33I-YqGfhMsVpi8GM4AH0b9UjQzgdqBvKvqxlaJk7BAgTlZVPO3iRE5IxArswPwQhUqdTSOtMqm4eQBVY-eW7_6zbMSiPswOt5M78n8QLbOuw2Zh9B1k") # Uncomment and replace with your key
-
+Sys.setenv(wikimedia_client_id = "") # Uncomment and replace with your key
+Sys.setenv(wikimedia_secret = "") # Uncomment and replace with your key
+Sys.setenv(wikimedia_token = "") # Uncomment and replace with your Access token
 # Print System variables
 
 Sys.getenv("wikimedia_client_id")
@@ -57,7 +306,7 @@ Sys.getenv("wikimedia_token")
 politely_req <- politely(httr2::request, verbose = TRUE)
 
 # Start to build the query by requesting API base url
-req <- politely_req("https://api.wikimedia.org/feed/v1/wikipedia")
+req <- politely_req("https://api.wikimedia.org/feed/v1/wikipedia/")
 
 # Note that our rate of requests has been limited to 1 request every 5 seconds
 # Rate limits of the API: https://api.wikimedia.org/wiki/Rate_limits
@@ -71,11 +320,14 @@ req <- politely_req("https://api.wikimedia.org/feed/v1/wikipedia")
 # Date: Today's date in YYYY/MM/DD format
 
 language_code <- "en"
-today <- Sys.Date() |> format("%y/%m/%d") # Stringing functions using R pipe
+today <- format(Sys.Date(), "%y/%m/%d")
 
 # While building the request, we need to pass to required headers:
 # Authorisation: Bearer YOUR_ACCESS_TOKEN
 # User-Agent: YOUR_APP_NAME (YOUR_EMAIL_OR_CONTACT_PAGE)
+
+# my_user_agent <- "wikipedia-api-tester (tuomas.k.heikkila@helsinki.fi)"
+my_user_agent <- "tuomas.k.heikkila@helsinki.fi"
 
 # We are now ready to build our query
 query <- req %>%
@@ -85,8 +337,9 @@ query <- req %>%
     "Authorisation" = paste0("Bearer ", Sys.getenv("wikimedia_token"))) %>%
 
   # Next set user-agent https://api.wikimedia.org/wiki/Special:AppManagement
-  req_user_agent("wikipedia-api-tester (tuomas.k.heikkila@helsinki.fi)") %>%
+  req_user_agent(my_user_agent) %>%
 
+  # Finally, append the path to today's feature
   req_url_path_append(language_code, "featured", today)
 
 # Try query out
@@ -102,19 +355,3 @@ if (resp_content_type(resp) != "application/json" |
 
 # Extract response object
 json <- resp %>% httr2::resp_body_json(simplify = TRUE)
-
-# TEST
-
-# Change complete url
-req <- request("http://example.com")
-req |> req_url("http://google.com")
-
-# Use a relative url
-req <- request("http://example.com/a/b/c")
-req |> req_url_relative("..")
-req |> req_url_relative("/d/e/f")
-
-# Change url components
-req |>
-  req_url_path_append("a")
-
