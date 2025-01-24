@@ -2,31 +2,30 @@
 # Tuomas Heikkilä
 # tuomas.k.heikkila@helsinki.fi
 
-# Exercises for API query
+# Exercises for performing API queries
 
 # PREPARATIONS #################################################################
 
 # Clean the environment
 rm(list = ls())
 
-# Install and load packages
+# Install and load packages necessary packages starting with pacman
 if(!require("pacman")) { install.packages("pacman") }
 
-# Load packages
-pacman::p_load(dplyr,
-               tidyr,
-               jsonlite,
-               readr,
-               httr2,
-               polite,
-               purrr,
-               WikipediR)
+# Load packages from CRAN using pacman that installs missing packages
+pacman::p_load(dplyr,     # For data transformations
+               tidyr,     # For data transformations
+               purrr,     # For data transformations
+               jsonlite,  # For data transformations
+               httr2,     # For performing requests
+               polite     # For querying web pages 'politely'
+               )
 
 sessioninfo::session_info()
 
-# QUERYING THE SEMANTIC SCHOLAR API ###
+# QUERYING THE SEMANTIC SCHOLAR API ############################################
 
-# API Documentation
+# API Documentation for Academic Graph API (1.0): https://api.semanticscholar.org/api-docs/
 
 # Be polite: wrap request function inside politely
 politely_req <- politely(httr2::request, verbose = TRUE)
@@ -34,21 +33,19 @@ politely_req <- politely(httr2::request, verbose = TRUE)
 # Request Semantic Scholar's Academic Graph API
 req <- politely_req("https://api.semanticscholar.org/graph/v1")
 
-# From API documentation
 # Rate limits: 10 request per second for paper/citations and paper/references
 
 # Define a function for looking up citations and reference from S2 Open Research
-# Corpus.
-get_citations <- function(
+# that also transforms the data to a data frame
 
-  ids,                                            # Identifiers: DOI or S2 IDs
-  k = 0,                                          # For indexing iterations
-  output = vector(mode = "list", length = 1e6),   # Output list
-  params = list(fields = c("paperId", "title")),  # Minimum field parameters
-  include_refs = FALSE                            # Option for looking up refs
+get_citations <-
+  function(ids,                                            # Identifiers: DOI or S2 IDs
+           k = 0,                                          # For indexing iterations
+           output = vector(mode = "list", length = 1e6),   # Output list
+           params = list(fields = c("paperId", "title")),  # Minimum field parameters
+           include_refs = FALSE) {                          # Option for looking up refs
 
-) {
-
+  # When we have multiple ids, iterate over them
   for (i in seq_along(ids)) {
 
     # Show progress
@@ -59,10 +56,12 @@ get_citations <- function(
 
     # Build query
     query <- req %>%
-      # req_headers(`x-api-key` = Sys.getenv("S2_KEY")) %>%   # Pass secret to header
+
+      # Pass restrictions on how the request is performed
       req_progress() %>%                   # Monitor progress
       req_throttle(rate = 1 / 5) %>%       # Limit requests to 1 per 5 seconds
       req_retry(max_tries = 4, backoff = ~30) %>%
+
       req_url_path_append("paper", paste0("DOI:", ids[i])) %>%
       req_url_query(!!!params, .multi = "comma")
 
